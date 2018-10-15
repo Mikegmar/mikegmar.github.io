@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+</head>
+<body>
+<h1>Loops</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of loops of differing quality</p>
+
+<button type="button" onclick="goodLoop()" >Good</button>
+<button type="button" onclick="badLoop()" >Bad</button>
+<p id="loop"></p>
+
+<h1>Conditionals</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of conditionals of differing quality</p>
+
+<button type="button" onclick="goodCond()">Good</button>
+<button type="button" onclick="badCond()">Bad</button>
+<p id="cond"></p>
+
+<h1>Functions</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of functions of differing quality</p>
+
+<button type="button" onclick="goodFunct()">Good</button>
+<button type="button" onclick="badFunct()">Bad</button>
+<p id="funct"></p>
+
+<h1>Variables</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of variables of differing quality</p>
+
+<button type="button" onclick="goodVar()">Good</button>
+<button type="button" onclick="badVar()">Bad</button>
+<p id="var"></p>
+
+<h1>Parameters</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of parameters of differing quality</p>
+
+<button type="button" onclick="goodParam(2, 3)">Good</button>
+<button type="button" onclick="badParam(2, 3)">Bad</button>
+<p id="param"></p>
+
+<h1>Arrays</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of arrays of differing quality</p>
+
+<button type="button" onclick="goodArray()">Good</button>
+<button type="button" onclick="badArray()">Bad</button>
+<p id="array"></p>
+
+<h1>Associative Arrays</h1>
+
+<p>Click on "Good" or "Bad" to see a demonstration of associative arrays of differing quality</p>
+
+<button type="button" onclick="goodAssoc()">Good</button>
+<button type="button" onclick="badAssoc()">Bad</button>
+<p id="assoc"></p>
+
+<script>
+		function goodLoop(){
+			var text = "good"; 
+			for(i=0; i<5; i++){
+				text = text.concat(" ", i.toString());
+			} 
+			document.getElementById('loop').innerHTML = text;
+		}
+		function badLoop(){
+			//This code never executes because i never increments, and never equals 5
+			var text = "bad "; 
+			for(i=0; i==5; i++){
+				text = text.concat(i.toString());
+			} 
+			document.getElementById('loop').innerHTML = text;
+		}
+		function goodCond(){
+			var done = false;
+			if(!done){
+				done = true;
+				document.getElementById('cond').innerHTML = "I am done";
+			} 
+			else{
+				document.getElementById('cond').innerHTML = "I am done";
+			}
+		}
+		function badCond(){
+			//This code should have used an else-if statement
+			var done = false;
+			var output = "";
+			if(done == false){
+				output = output.concat("I am not done");
+				document.getElementById('cond').innerHTML = output;
+				done = true;
+			}
+			if (done == true){
+				output = output.concat("I am done");
+				document.getElementById('cond').innerHTML = output;
+			}
+		}
+		function goodFunct(){
+			var a = 2;
+			var b = 3;
+			var add = function(a,b){return a+b};
+			document.getElementById('funct').innerHTML = "add(2,3) tells me " +a+" + "+b+" = "+add(a,b);
+		}
+		function badFunct(){
+			//functions should be named using verbs, not nouns
+			var a = 2;
+			var b = 3;
+			var plus= function(a,b){return a+b};
+			document.getElementById('funct').innerHTML = "plus(2,3) tells me "+a+" + "+b+" = "+plus+" but doesn't make as much sense to read";
+		}
+		function goodVar(){
+			var a = 2;
+			var b = 3;
+			var sum = a+b;
+			document.getElementById('var').innerHTML = "A is "+a+". B is "+b+". The sum is "+sum+".";
+		}
+		function badVar(){
+			//This name is not descriptive
+			var a = 2;
+			var b = 3;
+			var result = a+b;
+			document.getElementById('var').innerHTML = "A is "+a+". B is "+b+". The result is "+result+".";
+		}
+		function goodParam(a, b, c){
+			var a = 2;
+			var b = 3;
+			if (c == undefined){
+				c = 0;
+			}
+			var sum = function(a, b, c){return a+b+c;}
+			document.getElementById('param').innerHTML = "A is "+a+". B is "+b+". C is "+c+". The sum is "+sum(a,b,c)+".";
+			
+		}
+		function badParam(a, b, c){
+			var a = 2;
+			var b = 3;
+			//extra parameters should have been given a default
+			var sum = function(a, b, c){return a+b+c;}
+			document.getElementById('param').innerHTML = "A is "+a+". B is "+b+". C is "+c+". The sum is "+sum(a,b,c)+".";
+		}
+		function goodArray(){
+			var letters = ["A", "B", "C", "D"];
+			letters.push("E");
+			document.getElementById('array').innerHTML = letters;
+		}
+		function badArray(){
+			//hole left in array at [4]. should have used push to avoid mistakes in indexing
+			var letters = ["A", "B", "C", "D"];
+			letters[5] = "E";
+			document.getElementById('array').innerHTML = letters;
+		} 
+		function goodAssoc(){
+			document.getElementById('assoc').innerHTML = "JavaScript does not support AssociativeArrays, so I will find another solution";
+		}
+		function badAssoc(){
+			var letters = [];
+			letters["first"] = "+a+";
+			letters["second"] = "+b+";
+			document.getElementById('assoc').innerHTML = letters;
+			if(letters == null){
+				document.getElementById('assoc').innerHTML = "undefined";
+			}
+		}
+	</script>
+	
+</body>
+</html>
