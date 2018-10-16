@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+	<head>
+		<title>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</title>
+		<script src="objectETC.js"></script>
+	</head>
+	<body>
+		<h1>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h1>
+		<p>We can create an object with JavaScript. Let's make a data structure to hold student 
+		   information</p>
+		<p>Our object will hold:<p>
+		<ul>
+			<li>First Name</li>
+			<li>Last Name</li>
+			<li>Student ID number</li>
+			<li>Major</li>
+		</ul>
+		<p>These items will be <b>properties</b> of the object</p>
+		<p>Now we need to instantiate the object. Let's enter a student into our system</p>
+		<form name="form_1">
+			First name:<br>
+			<input type="text" id="firstname"><br>
+			Last name:<br>
+			<input type="text" id="lastname"><br>
+			Student ID:<br>
+			<input type="text" id="id"><br>
+			Major:<br>
+			<input type="text" id="major"><br>
+			<button type="button" onclick="createStudent()">Submit</button>
+		</form>
+		<br>
+		<p>The "Submit" button constructed an object, "student". Below 
+		you will see an echo of what you entered, rendered by a method of the object:</p>
+		<p id="echo"></p>
+		<p> Try entering a letter in the student ID box. A method of the object will check the
+			input and respond with an error message if invalid input is entered</p>
+		<p>Now that we have demonstrated Object Creation, Instantiation, and Functions, let's 
+		   use Inheritance to create a new object: a Student Employee. It will inherit the name, 
+		   major, and id number from the object "student", and will add a job title and employer.</p>
+		<form name="form_2">
+			First name:<br>
+			<input type="text" name="firstname"><br>
+			Last name:<br>
+			<input type="text" name="lastname"><br>
+			Student ID:<br>
+			<input type="text" name="id"><br>
+			Major:<br>
+			<input type="text" name="major"><br>
+			Employer:<br>
+			<input type="text" name="employer"><br>
+			Job Title:<br>
+			<input type="text" name="job"><br>
+			<button type="button" onclick="createEmployee()">Submit</button>
+		</form>
+		<p>Here's what you entered:</p>
+		<p id="echo_2"></p>
+		<p>Once again, we used an object constructor function to verify the input 
+		and create the object. To create the output to the screen, we overrided the 
+		"output" method from the Student object when we built the Employee object</p>
+	</body>
+			
