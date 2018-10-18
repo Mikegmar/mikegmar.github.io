@@ -61,9 +61,18 @@ a:hover{
 }
 
 header{
-	color: red;
+	color: blue;
 	text-align: center;
 }
+footer a{
+	color: blue;
+}
+
+footer{
+	color: blue;
+	text-align: center;
+}
+	
 
 b {
 	text-decoration: none;
