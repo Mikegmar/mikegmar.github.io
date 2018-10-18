@@ -1,117 +1,106 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="utf-8">
-      
-    <title>CIT 261 - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    
-    
-        <script type="text/javascript">
-            var totalCars = 0;
-            var car1;
-            var car2;
-            var car3;
-            var chosen;
-            
-            function car() {
-                this.make = document.getElementById('make').value;
-                this.model = document.getElementById('model').value;
-                this.year = document.getElementById('year').value;
-                this.vehicle = function() {
-                    return "Make" + this.make + "<br>" +
-                    "Model" + this.model + "<br>" +
-                    "Year" + this.year + "<br>";
-                };
-            }    
-            
-            function addCar () {
-                totalCars += 1;
-                
-                if (totalCars == 1) {
-                    car1 = new car();
-                    var b = document.createElement("BUTTON");
-                    var c = document.createTextNode("Car 1");
-                    b.appendChild(c);
-                    b.addEventListener("click", function() { cars(1); });
-                    document.getElementById('outputDiv').appendChild(b);
-                }
-                else if (totalCars == 2) {
-                    car2 = new car();
-                    var b = document.createElement("BUTTON");
-                    var c = document.createTextNode("Car 2");
-                    b.appendChild(c);
-                    b.addEventListener("click", function() { cars(2); });
-                    document.getElementById('outputDiv').appendChild(b);
-                }
-                else if (totalCars == 3) {
-                    car3 = new car();
-                    var b = document.createElement("BUTTON");
-                    var c = document.createTextNode("Car 3");
-                    b.appendChild(c);
-                    b.addEventListener("click", function() { cars(3); });
-                    document.getElementById('outputDiv').appendChild(b);
-                    document.getElementById('carInput').innerHTML = '';
-                    return;
-                }
-                    document.getElementById('make').value='';
-                    document.getElementById('model').value='';
-                    document.getElementById('year').value='';
-            }
-            
-            function cars(number) {
-                chosen = number;
-                
-                if (number == 1) {
-                    document.getElementById('outputDiv').innerHTML = cars1.vehicle();
-                }
-                else if (number == 2) {
-                    document.getElementById('outputDiv').innerHTML = cars2.vehicle();
-                }
-                else if (number == 3) {
-                    document.getElementById('outputDiv').innerHTML = cars3.vehicle();
-                }
-            }
-            
-            function race() {
-                if (totalCars < 3) {
-                    document.getElementById('outputDiv2').innerHTML = "Create 3 racers to start the race.";
-                } else {
-                    document.getElementById('outputDiv2').innerHTML = "Oh No, the Police came and arrested all of you and impounded your cars!";
-                }
-            }
-           
-            
-       </script>
-    
-    
+	<meta charset="UTF-8">
+	<title>JavsScript Objects - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</title>
 </head>
-
-
 <body>
-        <header>
-            <a href="index.html">
-            <h1>CIT 261 - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h1>
-	    </a>
-	</header>
-    
-        <div class="background2">
-            <h2>Race Time</h2>
-            <div id="carInput">
-                <input type="text" id="make" placeholder="Make"><br>
-                <input type="text" id="model" placeholder="Model"><br>
-                <input type="text" id="year" placeholder="Year"><br>
-                <button onclick="addCar()" id="button1">Add Vehicle</button>
-            </div>
-            <div id="outputDiv1"></div><br>
-            <div id="outputDiv"></div>
-        
-            <p>Ready to Race?</p>
-            <button onclick="race()">Race!</button><br>
-            <br><div id="outputDiv2"></div>
-        </div>
-    
+	<h1>Object Creations</h1>
+	<h3>With the new keyword</h3>
+	<pre>
+		var x = new Object();
+		x.num = 20;
+		x.age = 22;
+	</pre>
+	<script>
+	var x = new Object();
+		x.num = 20;
+		x.age = 22;
+	
+	</script>
 
+	<h3>With the object literal</h3>
+	<p>This is the preferred way</p>
+	<pre>
+		var x = {num:20, age:22};
+	</pre>
+
+	<h1>Properties</h1>
+	<p>Properties are the values that an object holds.</p>
+	<p>An example is the code in <strong>bold</strong></p>
+	<pre>
+		// With an object literal
+		var cellphone = {<strong>model:"note", generation:8</strong>};
+
+		// With a new object
+		var cellphone = new Object();
+		<strong>cellphone.model = "note";
+		cellphone.generation = 8;</strong>
+	</pre>
+
+	<h1>Methods</h1>
+	<p>A method is the behavior of an object</p>
+	<pre>
+		var dog = new Object();
+		// This is considered a method for the dog object
+		<strong>dog.bark = function(){
+		console.log("woof");
+		}</strong>
+	</pre>
+
+	<h1>Instantiation</h1>
+	<p>Instantiation is the initialization of an object</p>
+	<p>If we have class, we can instantiate it later on and use its properties/methods</p>
+	<pre>
+		function Person(){
+			age = 21;
+			eyeColor = "Brown";
+		}
+
+		// This instantiates a Person object
+		var x = new Person(){
+			console.log("Brown");
+		}
+	</pre>
+
+	<h1>Inheritance</h1>
+	<p>This is when an object shares its properties with another object</p>
+	<p>Here, we see that the base Animal class gives its properties to the Dog class</p>
+	<pre>
+		function Animal() = {}; // Base class Type
+		// This gives its __proto__ object parent the function. Memory efficient
+		Animal.prototype.eats = function(){
+			console.log("All animals eat");
+		}
+
+		
+		function Dog() {}; // Sub class Type
+		// This inherits the Animal's properties to the Dog class
+		Dog.prototype = new Animal();
+		Dog.prototype.bark = function(){
+			return "WOOF";
+		}
+
+		var doggo = new Dog();
+		document.getElementById("dog").innerHTML = doggo.bark();
+	</pre>
+	<p>If we instantiate and call the methods, we'll see that Dog inherited Animal's properties</p>
+	<div id="dog">
+
+	</div>
+	<script>
+		function Animal(){};
+		Animal.prototype.eats = function(){
+			console.log("All animals eat");
+		}
+		function Dog(){};
+		Dog.prototype = new Animal(); // inherits
+		Dog.prototype.bark = function(){
+			return "WOOF";
+		}
+		var doggo = new Dog();
+		document.getElementById("dog").innerHTML = doggo.bark();
+	</script>
 </body>
-
 </html>
