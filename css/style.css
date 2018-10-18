@@ -1,0 +1,208 @@
+html,
+
+body {
+	background-color:black;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background-color: black;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: red;
+    padding: 12px;
+    padding-right: 12px;
+    margin: auto;
+	max-width: 900px;
+}
+
+.background2 {
+    background-color: red;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: red;
+    padding: 12px;
+    padding-right: 12px;
+    margin: auto;
+	max-width: 900px;
+}
+
+.tilt {
+	width: 200px;
+}
+
+.twist {
+	width: 200px;
+}
+
+.scale {
+	width: 200px;
+}
+
+.translate {
+	width: 200px;
+}
+
+header a{
+	color: red;
+}
+
+a {
+	text-decoration: none;
+	padding: 12px;
+	color: white;
+	margin: auto;
+	font-size: 20px;
+}
+
+a:hover{
+	color: red;
+}
+
+header{
+	color: red;
+	text-align: center;
+}
+
+b {
+	text-decoration: none;
+	padding: 12px;
+	color: white;
+	margin: auto;
+	font-size: 20px
+}
+
+.tilt:hover {
+    transform: rotate(15deg);
+}
+
+.twist:hover {
+    transform: skew(30deg, 30deg);
+}
+
+.scale:hover {
+    transform: scale(2);
+}
+
+.translate:hover {
+    transform: translate(5em);
+}
+
+
+
+/* CSS3 Animations************************* */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 25px;
+}
+
+@-webkit-keyframes blackAndBlue {
+    from { background: black;}
+    to {background: blue;}
+}
+#div1 {
+    -webkit-animation: blackAndBlue 5s;
+}
+
+@-webkit-keyframes color {
+    0%   {background: black;}     
+    25%  {background: yellow;}
+    50%  {background: green;}
+    100% {background: blue;}    
+}
+#div2 {
+    -webkit-animation: color 7s;
+}
+
+@-webkit-keyframes alter {
+    0%   {background: black;}     
+    25%  {background: yellow; box-shadow: 0 0 4px 2px purple;} 
+    50%  {background: green; box-shadow: 0 0 8px 2px orange;}
+    100% {background: blue; box-shadow: 0 0 16px 6px white;}
+}
+#div3 {
+    -webkit-animation: alter 9s
+}
+
+@-webkit-keyframes transform {
+    0%   {background: black;}     
+    25%  {background: yellow; box-shadow: 0 0 4px 2px purple; -webkit-transform: scale(1.1) rotate(4deg) translate(1em);} 
+    50%  {background: green; box-shadow: 0 0 8px 2px orange; opacity: .25; -webkit-transform: scale(1.5) rotate(15deg) translate(.5em, -5em);}
+    100% {background: blue; box-shadow: 0 0 16px 6px white; -webkit-transform: scale(.05) rotate(0deg) translate(0em, -30em);}
+}
+#div4 {
+    -webkit-animation: transform 12s 2 alternate;
+}
+
+
+/* CSS3 Transitions************************* */
+
+#div5:hover {
+    width: 300px;
+    background: blue;
+    transform: rotate(180deg);
+
+    transition: width 2s, transform 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+    }
+
+/* Local Storage************************* */
+#storageBox{
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+/* AJAX - JSON************************** */
+img {
+    width: 60%;
+    padding-bottom: 5px;
+}
+
+#jsonHeader {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#slideContainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 20px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #193bcf;
+    cursor: pointer;
+}
+
+#jsonDetails {
+    padding-bottom: 5px;
+}
+
+#jsonStringOutput {
+    padding-bottom: 20px;
+}
