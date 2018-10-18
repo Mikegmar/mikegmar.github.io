@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+      
+    <title>CIT 261 - Object Creation Functions</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    
+    
+        <script type="text/javascript">
+            var totalCars = 0;
+            var car1;
+            var car2;
+            var car3;
+            var chosen;
+            
+            function car() {
+                this.make = document.getElementById('make').value;
+                this.model = document.getElementById('model').value;
+                this.year = document.getElementById('year').value;
+                this.vehicle = function() {
+                    return "Make" + this.make + "<br>" +
+                    "Model" + this.model + "<br>" +
+                    "Year" + this.year + "<br>";
+                };
+            }    
+            
+            function addCar () {
+                totalCars += 1;
+                
+                if (totalCars == 1) {
+                    car1 = new car();
+                    var b = document.createElement("BUTTON");
+                    var c = document.createTextNode("Car 1");
+                    b.appendChild(c);
+                    b.addEventListener("click", function() { cars(1); });
+                    document.getElementById('outputDiv').appendChild(b);
+                }
+                else if (totalCars == 2) {
+                    car2 = new car();
+                    var b = document.createElement("BUTTON");
+                    var c = document.createTextNode("Car 2");
+                    b.appendChild(c);
+                    b.addEventListener("click", function() { cars(2); });
+                    document.getElementById('outputDiv').appendChild(b);
+                }
+                else if (totalCars == 3) {
+                    car3 = new car();
+                    var b = document.createElement("BUTTON");
+                    var c = document.createTextNode("Car 3");
+                    b.appendChild(c);
+                    b.addEventListener("click", function() { cars(3); });
+                    document.getElementById('outputDiv').appendChild(b);
+                    document.getElementById('carInput').innerHTML = '';
+                    return;
+                }
+                    document.getElementById('make').value='';
+                    document.getElementById('model').value='';
+                    document.getElementById('year').value='';
+            }
+            
+            function cars(number) {
+                chosen = number;
+                
+                if (number == 1) {
+                    document.getElementById('outputDiv').innerHTML = cars1.vehicle();
+                }
+                else if (number == 2) {
+                    document.getElementById('outputDiv').innerHTML = cars2.vehicle();
+                }
+                else if (number == 3) {
+                    document.getElementById('outputDiv').innerHTML = cars3.vehicle();
+                }
+            }
+            
+            function race() {
+                if (totalCars < 3) {
+                    document.getElementById('outputDiv2').innerHTML = "Create 3 racers to start the race.";
+                } else {
+                    document.getElementById('outputDiv2').innerHTML = "Hahahaha - You forgot to grab the keys!";
+                }
+            }
+           
+            
+       </script>
+    
+    
+</head>
+
+
+<body>
+        <header>
+            <a href="index.html">
+            <h1>CIT 261 - Object Creation Functions</h1>
+	    </a>
+	</header>
+    
+        <div class="background2">
+            <h2>Race Time</h2>
+            <div id="carInput">
+                <input type="text" id="make" placeholder="Make"><br>
+                <input type="text" id="model" placeholder="Model"><br>
+                <input type="text" id="year" placeholder="Year"><br>
+                <button onclick="addCar()" id="button1">Add Vehicle</button>
+            </div>
+            <div id="outputDiv1"></div><br>
+            <div id="outputDiv"></div>
+        
+            <p>Ready to Race?</p>
+            <button onclick="race()">Race!</button><br>
+            <br><div id="outputDiv2"></div>
+        </div>
+    
+
+</body>
+
+</html>
