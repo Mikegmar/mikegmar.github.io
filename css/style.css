@@ -102,63 +102,12 @@ b {
 
 /* CSS3 Animations************************* */
 
-.box {
-    width: 100px;
-    height: 100px;
-    background: black;
-    margin: 25px;
-}
 
-@-webkit-keyframes blackAndBlue {
-    from { background: black;}
-    to {background: blue;}
-}
-#div1 {
-    -webkit-animation: blackAndBlue 5s;
-}
-
-@-webkit-keyframes color {
-    0%   {background: black;}     
-    25%  {background: yellow;}
-    50%  {background: green;}
-    100% {background: blue;}    
-}
-#div2 {
-    -webkit-animation: color 7s;
-}
-
-@-webkit-keyframes alter {
-    0%   {background: black;}     
-    25%  {background: yellow; box-shadow: 0 0 4px 2px purple;} 
-    50%  {background: green; box-shadow: 0 0 8px 2px orange;}
-    100% {background: blue; box-shadow: 0 0 16px 6px white;}
-}
-#div3 {
-    -webkit-animation: alter 9s
-}
-
-@-webkit-keyframes transform {
-    0%   {background: black;}     
-    25%  {background: yellow; box-shadow: 0 0 4px 2px purple; -webkit-transform: scale(1.1) rotate(4deg) translate(1em);} 
-    50%  {background: green; box-shadow: 0 0 8px 2px orange; opacity: .25; -webkit-transform: scale(1.5) rotate(15deg) translate(.5em, -5em);}
-    100% {background: blue; box-shadow: 0 0 16px 6px white; -webkit-transform: scale(.05) rotate(0deg) translate(0em, -30em);}
-}
-#div4 {
-    -webkit-animation: transform 12s 2 alternate;
-}
 
 
 /* CSS3 Transitions************************* */
 
-#div5:hover {
-    width: 300px;
-    background: blue;
-    transform: rotate(180deg);
 
-    transition: width 2s, transform 2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.5s;
-    }
 
 /* Local Storage************************* */
 #storageBox{
