@@ -10,7 +10,7 @@ body {
     background-color: black;
     border-style: solid;
     border-radius: 25px;
-    border-color: red;
+    border-color: blue;
     padding: 12px;
     padding-right: 12px;
     margin: auto;
@@ -45,7 +45,7 @@ body {
 }
 
 header a{
-	color: red;
+	color: blue;
 }
 
 a {
