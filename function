@@ -77,7 +77,7 @@
                 if (totalCars < 3) {
                     document.getElementById('outputDiv2').innerHTML = "Create 3 racers to start the race.";
                 } else {
-                    document.getElementById('outputDiv2').innerHTML = "Hahahaha - You forgot to grab the keys!";
+                    document.getElementById('outputDiv2').innerHTML = "Oh No, the Police came and arrested all of you and impounded your cars!";
                 }
             }
            
