@@ -1,201 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>Loops Conditional Statements Functions Variables Parameters Arrays Associative Arrays</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-
-  </head>
-  <body>
-    <header>
-      <p class="logo">CIT261</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Loops, Conditional Statements, Functions, Arrays Example Page">
+    <meta name="author" content="Laura Friedman">
+            
+    <title>Loops, Conditional Statements, Functions, Arrays Example - Laura Friedman</title>
+    
+    <!-- Custom style for this site -->
+    <link href="/CIT261/css/style.css" rel="stylesheet">
       
-      <nav>
-        <ul id="menu" class="top">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Topics</a>
-            <ul class="sub">
-              <li><a href="topic1.html">Topic 1</a></li>
-              <li><a href="topic2.html">Topic 2</a></li>
-              <li><a href="topic3.html">Topic 3</a></li>
-              <li><a href="topic4.html">Topic 4</a></li>
-              <li><a href="topic5.html">Topic 5</a></li>
-              <li><a href="topic6.html">Topic 6-7</a></li>
-              <li><a href="topic8.html">Topic 8</a></li>
-              <li><a href="topic9.html">Topic 9</a></li>
-              <li><a href="topic10.html">Topic 10</a></li>
-              <li><a href="topic11.html">Topic 11</a></li>
-              <li><a href="topic12.html">Topic 12</a></li>
-              <li><a href="topic13.html">Topic 13</a></li>
-            </ul></li>
-        </ul></nav>
-    </header>
-    <main>
-      <h1>Topic 1: Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
-
-
-      <section>
-        <h2>Variables</h2>        
-        <div class="code">
-          <code>var i = "";<br>
-            var number;<br>
-            var number = 0;<br>
-            var valid = false;</code>
-        </div>        
-        <div class="code">
-          <code>i = "red";<br>
-            number-2;<br>
-            valid = true;</code>
+    <!-- Normalize CSS -->
+    <link href="/CIT261/css/normalize.css" rel="stylesheet">
+      
+	<script type="text/javascript">
+		var loopmessage;
+		
+		function forLoopExample(){
+			loopmessage = "Starting for Loop" + "<br />";
+			var trucks = ["Ford F150", "Honda Ridgeline", "Dodge Ram 1500", "Chevy Silverado", "Toyota Tundra"];
+			var count;			
+         
+			for (count = 0; count < trucks.length; count++) {
+				loopmessage += "Truck " + count + " in array = " + trucks[count] + "<br>";
+			}
+			loopmessage += "Total trucks in array = " + trucks.length + "<br>" + "for Loop stopped!";
+			document.getElementById("for-loop-example").innerHTML = loopmessage;
+		}
+		function forInLoopExample(){
+            var person = {fname:"Friedman", lname:"Michael", age:22}; 
+            var x;
+			var loopmessage = "Starting for/in Loop" + "<br />";
+         
+			for (x in person) {
+				loopmessage += person[x] + " ";
+			}
+			loopmessage += "<br />" + "for/in Loop stopped!";
+			document.getElementById("for-in-loop-example").innerHTML = loopmessage;
+		}
+				
+		function whileLoopExample(){
+			var loopmessage = "Starting while Loop" + "<br />";
+			var x = 0;
+        	while (x < 10) {
+				loopmessage += "Current Count : " + x + "<br />";
+				x++;
+        	}
+			loopmessage += "while Loop stopped!";
+			document.getElementById("while-loop-example").innerHTML = loopmessage;
+		}
+		function doWhileLoopExample(){
+			var loopmessage = "Starting do/while Loop" + "<br />";
+			var x = 0;
+        	do {
+				loopmessage += "Current Count : " + x + "<br />";
+				x++;
+        	}
+			while (x < 10);
+			loopmessage += "do/while Loop stopped!";
+			document.getElementById("do-while-loop-example").innerHTML = loopmessage;
+		}
+		function ifElseConditionExample() {
+			var hour = new Date().getHours(); 
+			var greeting;
+			if (hour < 18) {
+				greeting = "Good day";
+			} else {
+				greeting = "Good evening";
+			}
+			document.getElementById("if-else-condition-example").innerHTML = greeting;
+		}
+		function ifElseifElseConditionExample() {
+			var greeting;
+			var time = new Date().getHours();
+			if (time < 12) {
+				greeting = "Good morning";
+			} else if (time < 18) {
+				greeting = "Good afternoon";
+			} else {
+				greeting = "Good night";
+			}
+			document.getElementById("if-elseif-else-condition-example").innerHTML = greeting;
+		}
+		
+		function switchConditionExample() {
+			var day;
+			switch (new Date().getDay()) {
+    			case 0:
+        			day = "Sunday";
+        			break;
+				case 1:
+        			day = "Monday";
+        			break;
+				case 2:
+					day = "Tuesday";
+					break;
+				case 3:
+					day = "Wednesday";
+					break;
+				case 4:
+					day = "Thursday";
+					break;
+				case 5:
+					day = "Friday";
+					break;
+				case  6:
+					day = "Saturday";
+			}
+			document.getElementById("switch-condition-example").innerHTML = "Today is " + day;
+		}
+		
+		function objectDatatypeExample() {
+			var person = {
+				firstName : "Michael",
+				lastName  : "Friedman",
+				age       : 22,
+				eyeColor  : "Brown"
+			};
+			document.getElementById("object-datatype-example").innerHTML =
+				person.firstName + " " + person.lastName + " is " + person.age + " years old and has " + person.eyeColor + " eyes.";
+		}
+		
+		function associativeArrayExample() {
+			var person = [];
+			person["firstName"] = "Michael";
+			person["lastName"] = "Friedman";
+			person["age"] = 22; 
+			document.getElementById("associative-array-example").innerHTML =
+				person[0] + " " + person.length;
+		}
+		
+	  </script>
+	</head>
+    
+	<body>
+		<header>
+		<h3>Loops, Conditional Statements, Functions, Arrays Example</h3>
+        <hr>
+		</header>
+    <div class="main_content">
+		
+        <div class="col_left">
+		<h4>Display a for Loop:</h4>
+		<p>This will display all the trucks in an array.</p>	
+		<p id="for-loop-example"></p>
+		<button onclick="forLoopExample()">Try it</button>
         </div>
-      </section>
-
-
-      <section>
-        <h2>Arrays</h2>       
-        <div class="code">
-          <code>var dogs = ["Fido", "Spot", "Fluffy", "Spike"];<br>
-            var cats = new array(3);<br>   
-          </code>
-        </div>     
-        <div class="code">
-          <code>dogs[0]; // The value is currently "Fido"<br>
-            cats[0] = "Felix"; // This would go in the first spot of the cats array;<br>
-            cats[1] = "Tom";<br>
-            cats[2] = "Garfield";
-          </code>
-        </div>  
-
-      </section>
-      <section>
-        <h2>Associative Arrays</h2>
-        <div class="code">
-          <code>var john = {firstName: "John", lastName: "Doe", age: "42", sex: "male", marStatus: single};
-          </code>
+		
+        <div class="col_center">
+		<h4>Display a for/in Loop:</h4>
+		<p>This will display all of the fields in a record with format lname, fname, age.</p>	
+		<p id="for-in-loop-example"></p>
+		<button onclick="forInLoopExample()">Try it</button>
         </div>
-        <p>To access a value, you use the keyword associated with it. You can't use an index.  For instance john[3] will return as undefined.  Instead you would access a value in one of the two ways shown below. </p>
-        <div class="code">
-          <code>john.age;<br>
-            john['age'];<br><br>
-            var info = john.firstName + " " + john["lastName"] + " is " + john.age + " years old.";
-          </code>
+		
         </div>
-        <div id="assoc" class="result"></div>
-      </section>
-
-
-
-      <section>
-        <h2>Loops</h2>
-        <h3>for loop</h3>
-        <div class='code'>
-          <code>var message = ""<br>
-            for (var i = 0; i < 10; i++) {<br>
-            &nbsp;&nbsp;message += i + " "<br>
-            }<br>
-            document.getElementById("result1").innerHTML = "for loop result=" + message</code>
+        <hr>
+		
+    <div class="main_content">
+		
+        <div class="col_left">
+		<h4>Display a while Loop:</h4>
+		<p>This will display a row with the current index value in a while loop 10 times. It will execute the loop after checking the condition.</p>	
+		<p id="while-loop-example"></p>
+		<button onclick="whileLoopExample()">Try it</button>
         </div>
-        <div id="result1" class="result"></div>
-
-        <h3>for in loop</h3>
-        <div class="code">
-          <code>var output = "John-";<br>
-            var n;<br>
-            for (n in john) {<br>
-            &nbsp;&nbsp;output += n + ": " + john[n];<br>
-            }<br>
-            document.getElementById("output").innerHTML = "for in result = " + output; 
-          </code>
+		
+        <div class="col_center">
+		<h4>Display a for/in Loop:</h4>
+		<p>This will display a row with the current index value in a while loop 10 times. It will execute the loop before checking the condition.</p>	
+		<p id="do-while-loop-example"></p>
+		<button onclick="doWhileLoopExample()">Try it</button>
         </div>
-        <div id="output" class="result"></div>
-        <h3>while loop</h3>
-        <code>while(i < 10)</code>
-        <p>This will repeat the loop until the counter i reaches 10.</p>
-        <code>while(!valid)</code>
-        <div class="code">
-          <code>var j = 0;<br>
-            var message = ""<br>
-            var cat = "";<br>
-            while(j < cats.length) {<br>
-            cat = cats[j];<br>
-            &nbsp;&nbsp;message += cats + " ";<br>
-            &nbsp;&nbsp;j++;<br>
-            }<br>
-            document.getElementById("result2").innerHTML = "while loop result = "</code>
+		
+	</div>
+	<hr>
+
+	<div class="main_content">
+		
+        <div class="col_left">
+		<h4>If/Else Condition:</h4>
+		<p>Display a greeting based on the time of day. If it is before 6PM, it will display 'Good day', else it will display 'Good evening'.</p>	
+		<p id="if-else-condition-example"></p>
+		<button onclick="ifElseConditionExample()">Try it</button>
         </div>
-        <div id="result2" class="result"></div>
-
-
-        <h3>do while loop</h3>
-        <div class="code">
-          <code>var k = 3;<br>
-            var message = "";<br>
-            var dog = "";<br>
-            do {<br>
-            var dog = dogs[k];<br>
-            &nbsp;&nbsp;message += dog + ", ";<br>
-            &nbsp;&nbsp;k++;<br>
-            } while(i < 3);<br>
-            document.getElementById("result3").innerHTML = "do while loop result =" + message;</code>
+		
+        <div class="col_center">
+		<h4>If/Elseif/Else Condition:</h4>
+		<p>Display a greeting based on the time of day. If it is before 12N, it will display 'Good morning', elseif it is before 6PM it will display 'Good afternoon', else it will display 'Good night'.</p>	
+		<p id="if-elseif-else-condition-example"></p>
+		<button onclick="ifElseifElseConditionExample()">Try it</button>
         </div>
-        <div id="result3" class="result"></div>
-
-      </section>
-
-      <section>
-        <h2>Conditionals</h2>
-
-        <h3>if statements</h3>
-	      
-        <div class="code">
-          var color = 3;<br>
-          <code>if (color < 5) {<br>
-            &nbsp;&nbsp;document.getElementById(output2).innerHTML = "The sky is blue."<br>
-            }</code>
+		
         </div>
-        <div id="output2" class="result"></div>
-
-
-        <h3>if else statements</h3>
-
-        <div class="code">
-          <code>var number = 7;<br>
-            if (number < 5) {<br>
-            &nbsp;&nbsp;document.getElementById("condition2").innerHTML = "The number " + number + " is less than 5";<br>
-            } else {<br>
-            &nbsp;&nbsp;document.getElementById("condition2").innerHTML = "The number " + number + " is greater than 5";<br>
-            }</code>
+        <hr>
+ 	<div class="main_content">
+		
+        <div class="col_left">
+		<h4>Switch Condition:</h4>
+		<p>Display the day of the week based on the current date.</p>	
+		<p id="switch-condition-example"></p>
+		<button onclick="switchConditionExample()">Try it</button>
         </div>
-        <div id="condition2" class="result"></div>
-
-
-        <h3>if else if statements</h3>
-	      
-        <div class="code">
-          <code>var randomNumber = Math.floor(Math.random() * (100 - 1) + 1);<br>
-            if (randomNumber <= 25) {<br>
-            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 1 and 25";<br>
-            } else if (randomNumber <= 50) {<br>
-            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 25 and 50";<br>
-            } else if (randomNumber <= 75) {<br>
-            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 50 and 75";<br>
-            } else {<br>
-            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 75 and 100";<br>
-            }</code>
+		
+        <div class="col_center">
+		<h4>Object Datatype:</h4>
+		<p>This function creates a person object and displays the fields (first name, last name, age, and eye color).</p>	
+		<p id="object-datatype-example"></p>
+		<button onclick="objectDatatypeExample()">Try it</button>
         </div>
-        <div id="condition3" class="result"></div>
-        <h3>switch statements</h3>
-
-        <div class="code">
-          <code>var text = "";<br>
-            switch (rainbow) {<br>
-            &nbsp;&nbsp;case "RED":<br> 
-            &nbsp;&nbsp;&nbsp;&nbsp;text = "red quote";<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-            &nbsp;&nbsp;case "ORANGE":<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;text = "orange quote";<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-            &nbsp;&nbsp;case "YELLOW":<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;text = "yellow quote";<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-            &nbsp;&nbsp;case "GREEN":<br>
+		
+        </div>
+        <hr>
+  	<div class="main_content">
+		
+        <div class="col_left">
+		<h4>Associative Array:</h4>
+		<p>Attempts to reference an array using a name, rather than a numeric value. This causes unpredictable and incorrect results.</p>	
+		<p id="associative-array-example"></p>
+		<button onclick="associativeArrayExample()">Try it</button>
+        </div>
+		
+        <div class="col_center">
+        </div>
+		
+        </div>
+        <hr>
+   <footer>
+      &copy;2018 Laura Friedman | <a href="http://www.redonks.com/CIT261/index.html">CIT 261: JavaScript Mobile Software Development</a> | <a href="http://www.redonks.com">Redonks.com</a> | <a href="https://github.com/Friedman-Laura/CIT261" target="_blank">Github</a> | <a href="#">Team Project (Incomplete)</a>
+    </footer>
+	</body>
+</html>
