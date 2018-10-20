@@ -1,176 +1,201 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-<head>
-</head>
-<body>
-<h1>Loops</h1>
+  <head>
+    <title>Loops Conditional Statements Functions Variables Parameters Arrays Associative Arrays</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
-<p>Click on "Good" or "Bad" to see a demonstration of loops of differing quality</p>
+  </head>
+  <body>
+    <header>
+      <p class="logo">Tammy Dresen CIT261</p>
+      
+      <nav>
+        <ul id="menu" class="top">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Topics</a>
+            <ul class="sub">
+              <li><a href="topic1.html">Topic 1</a></li>
+              <li><a href="topic2.html">Topic 2</a></li>
+              <li><a href="topic3.html">Topic 3</a></li>
+              <li><a href="topic4.html">Topic 4</a></li>
+              <li><a href="topic5.html">Topic 5</a></li>
+              <li><a href="topic6.html">Topic 6-7</a></li>
+              <li><a href="topic8.html">Topic 8</a></li>
+              <li><a href="topic9.html">Topic 9</a></li>
+              <li><a href="topic10.html">Topic 10</a></li>
+              <li><a href="topic11.html">Topic 11</a></li>
+              <li><a href="topic12.html">Topic 12</a></li>
+              <li><a href="topic13.html">Topic 13</a></li>
+            </ul></li>
+        </ul></nav>
+    </header>
+    <main>
+      <h1>Topic 1: Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
 
-<button type="button" onclick="goodLoop()" >Good</button>
-<button type="button" onclick="badLoop()" >Bad</button>
-<p id="loop"></p>
 
-<h1>Conditionals</h1>
+      <section>
+        <h2>Variables</h2>        
+        <div class="code">
+          <code>var i = "";<br>
+            var number;<br>
+            var number = 0;<br>
+            var valid = false;</code>
+        </div>        
+        <div class="code">
+          <code>i = "red";<br>
+            number-2;<br>
+            valid = true;</code>
+        </div>
+      </section>
 
-<p>Click on "Good" or "Bad" to see a demonstration of conditionals of differing quality</p>
 
-<button type="button" onclick="goodCond()">Good</button>
-<button type="button" onclick="badCond()">Bad</button>
-<p id="cond"></p>
+      <section>
+        <h2>Arrays</h2>       
+        <div class="code">
+          <code>var dogs = ["Fido", "Spot", "Fluffy", "Spike"];<br>
+            var cats = new array(3);<br>   
+          </code>
+        </div>     
+        <div class="code">
+          <code>dogs[0]; // The value is currently "Fido"<br>
+            cats[0] = "Felix"; // This would go in the first spot of the cats array;<br>
+            cats[1] = "Tom";<br>
+            cats[2] = "Garfield";
+          </code>
+        </div>  
 
-<h1>Functions</h1>
+      </section>
+      <section>
+        <h2>Associative Arrays</h2>
+        <div class="code">
+          <code>var john = {firstName: "John", lastName: "Doe", age: "42", sex: "male", marStatus: single};
+          </code>
+        </div>
+        <p>To access a value, you use the keyword associated with it. You can't use an index.  For instance john[3] will return as undefined.  Instead you would access a value in one of the two ways shown below. </p>
+        <div class="code">
+          <code>john.age;<br>
+            john['age'];<br><br>
+            var info = john.firstName + " " + john["lastName"] + " is " + john.age + " years old.";
+          </code>
+        </div>
+        <div id="assoc" class="result"></div>
+      </section>
 
-<p>Click on "Good" or "Bad" to see a demonstration of functions of differing quality</p>
 
-<button type="button" onclick="goodFunct()">Good</button>
-<button type="button" onclick="badFunct()">Bad</button>
-<p id="funct"></p>
 
-<h1>Variables</h1>
+      <section>
+        <h2>Loops</h2>
+        <h3>for loop</h3>
+        <div class='code'>
+          <code>var message = ""<br>
+            for (var i = 0; i < 10; i++) {<br>
+            &nbsp;&nbsp;message += i + " "<br>
+            }<br>
+            document.getElementById("result1").innerHTML = "for loop result=" + message</code>
+        </div>
+        <div id="result1" class="result"></div>
 
-<p>Click on "Good" or "Bad" to see a demonstration of variables of differing quality</p>
+        <h3>for in loop</h3>
+        <div class="code">
+          <code>var output = "John-";<br>
+            var n;<br>
+            for (n in john) {<br>
+            &nbsp;&nbsp;output += n + ": " + john[n];<br>
+            }<br>
+            document.getElementById("output").innerHTML = "for in result = " + output; 
+          </code>
+        </div>
+        <div id="output" class="result"></div>
+        <h3>while loop</h3>
+        <code>while(i < 10)</code>
+        <p>This will repeat the loop until the counter i reaches 10.</p>
+        <code>while(!valid)</code>
+        <div class="code">
+          <code>var j = 0;<br>
+            var message = ""<br>
+            var cat = "";<br>
+            while(j < cats.length) {<br>
+            cat = cats[j];<br>
+            &nbsp;&nbsp;message += cats + " ";<br>
+            &nbsp;&nbsp;j++;<br>
+            }<br>
+            document.getElementById("result2").innerHTML = "while loop result = "</code>
+        </div>
+        <div id="result2" class="result"></div>
 
-<button type="button" onclick="goodVar()">Good</button>
-<button type="button" onclick="badVar()">Bad</button>
-<p id="var"></p>
 
-<h1>Parameters</h1>
+        <h3>do while loop</h3>
+        <div class="code">
+          <code>var k = 3;<br>
+            var message = "";<br>
+            var dog = "";<br>
+            do {<br>
+            var dog = dogs[k];<br>
+            &nbsp;&nbsp;message += dog + ", ";<br>
+            &nbsp;&nbsp;k++;<br>
+            } while(i < 3);<br>
+            document.getElementById("result3").innerHTML = "do while loop result =" + message;</code>
+        </div>
+        <div id="result3" class="result"></div>
 
-<p>Click on "Good" or "Bad" to see a demonstration of parameters of differing quality</p>
+      </section>
 
-<button type="button" onclick="goodParam(2, 3)">Good</button>
-<button type="button" onclick="badParam(2, 3)">Bad</button>
-<p id="param"></p>
+      <section>
+        <h2>Conditionals</h2>
 
-<h1>Arrays</h1>
+        <h3>if statements</h3>
+	      
+        <div class="code">
+          var color = 3;<br>
+          <code>if (color < 5) {<br>
+            &nbsp;&nbsp;document.getElementById(output2).innerHTML = "The sky is blue."<br>
+            }</code>
+        </div>
+        <div id="output2" class="result"></div>
 
-<p>Click on "Good" or "Bad" to see a demonstration of arrays of differing quality</p>
 
-<button type="button" onclick="goodArray()">Good</button>
-<button type="button" onclick="badArray()">Bad</button>
-<p id="array"></p>
+        <h3>if else statements</h3>
 
-<h1>Associative Arrays</h1>
+        <div class="code">
+          <code>var number = 7;<br>
+            if (number < 5) {<br>
+            &nbsp;&nbsp;document.getElementById("condition2").innerHTML = "The number " + number + " is less than 5";<br>
+            } else {<br>
+            &nbsp;&nbsp;document.getElementById("condition2").innerHTML = "The number " + number + " is greater than 5";<br>
+            }</code>
+        </div>
+        <div id="condition2" class="result"></div>
 
-<p>Click on "Good" or "Bad" to see a demonstration of associative arrays of differing quality</p>
 
-<button type="button" onclick="goodAssoc()">Good</button>
-<button type="button" onclick="badAssoc()">Bad</button>
-<p id="assoc"></p>
+        <h3>if else if statements</h3>
+	      
+        <div class="code">
+          <code>var randomNumber = Math.floor(Math.random() * (100 - 1) + 1);<br>
+            if (randomNumber <= 25) {<br>
+            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 1 and 25";<br>
+            } else if (randomNumber <= 50) {<br>
+            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 25 and 50";<br>
+            } else if (randomNumber <= 75) {<br>
+            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 50 and 75";<br>
+            } else {<br>
+            &nbsp;&nbsp;document.getElementById("condition3").innerHTML = "The number " + randomNumber + " is between 75 and 100";<br>
+            }</code>
+        </div>
+        <div id="condition3" class="result"></div>
+        <h3>switch statements</h3>
 
-<script>
-		function goodLoop(){
-			var text = "good"; 
-			for(i=0; i<5; i++){
-				text = text.concat(" ", i.toString());
-			} 
-			document.getElementById('loop').innerHTML = text;
-		}
-		function badLoop(){
-			//This code never executes because i never increments, and never equals 5
-			var text = "bad "; 
-			for(i=0; i==5; i++){
-				text = text.concat(i.toString());
-			} 
-			document.getElementById('loop').innerHTML = text;
-		}
-		function goodCond(){
-			var done = false;
-			if(!done){
-				done = true;
-				document.getElementById('cond').innerHTML = "I am done";
-			} 
-			else{
-				document.getElementById('cond').innerHTML = "I am done";
-			}
-		}
-		function badCond(){
-			//This code should have used an else-if statement
-			var done = false;
-			var output = "";
-			if(done == false){
-				output = output.concat("I am not done");
-				document.getElementById('cond').innerHTML = output;
-				done = true;
-			}
-			if (done == true){
-				output = output.concat("I am done");
-				document.getElementById('cond').innerHTML = output;
-			}
-		}
-		function goodFunct(){
-			var a = 2;
-			var b = 3;
-			var add = function(a,b){return a+b};
-			document.getElementById('funct').innerHTML = "add(2,3) tells me " +a+" + "+b+" = "+add(a,b);
-		}
-		function badFunct(){
-			//functions should be named using verbs, not nouns
-			var a = 2;
-			var b = 3;
-			var plus= function(a,b){return a+b};
-			document.getElementById('funct').innerHTML = "plus(2,3) tells me "+a+" + "+b+" = "+plus+" but doesn't make as much sense to read";
-		}
-		function goodVar(){
-			var a = 2;
-			var b = 3;
-			var sum = a+b;
-			document.getElementById('var').innerHTML = "A is "+a+". B is "+b+". The sum is "+sum+".";
-		}
-		function badVar(){
-			//This name is not descriptive
-			var a = 2;
-			var b = 3;
-			var result = a+b;
-			document.getElementById('var').innerHTML = "A is "+a+". B is "+b+". The result is "+result+".";
-		}
-		function goodParam(a, b, c){
-			var a = 2;
-			var b = 3;
-			if (c == undefined){
-				c = 0;
-			}
-			var sum = function(a, b, c){return a+b+c;}
-			document.getElementById('param').innerHTML = "A is "+a+". B is "+b+". C is "+c+". The sum is "+sum(a,b,c)+".";
-			
-		}
-		function badParam(a, b, c){
-			var a = 2;
-			var b = 3;
-			//extra parameters should have been given a default
-			var sum = function(a, b, c){return a+b+c;}
-			document.getElementById('param').innerHTML = "A is "+a+". B is "+b+". C is "+c+". The sum is "+sum(a,b,c)+".";
-		}
-		function goodArray(){
-			var letters = ["A", "B", "C", "D"];
-			letters.push("E");
-			document.getElementById('array').innerHTML = letters;
-		}
-		function badArray(){
-			//hole left in array at [4]. should have used push to avoid mistakes in indexing
-			var letters = ["A", "B", "C", "D"];
-			letters[5] = "E";
-			document.getElementById('array').innerHTML = letters;
-		} 
-		function goodAssoc(){
-			document.getElementById('assoc').innerHTML = "JavaScript does not support AssociativeArrays, so I will find another solution";
-		}
-		function badAssoc(){
-			var letters = [];
-			letters["first"] = "+a+";
-			letters["second"] = "+b+";
-			document.getElementById('assoc').innerHTML = letters;
-			if(letters == null){
-				document.getElementById('assoc').innerHTML = "undefined";
-			}
-		}
-	</script>
-	
-</body>
-</html>
+        <div class="code">
+          <code>var text = "";<br>
+            switch (rainbow) {<br>
+            &nbsp;&nbsp;case "RED":<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;text = "red quote";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+            &nbsp;&nbsp;case "ORANGE":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text = "orange quote";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+            &nbsp;&nbsp;case "YELLOW":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text = "yellow quote";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+            &nbsp;&nbsp;case "GREEN":<br>
