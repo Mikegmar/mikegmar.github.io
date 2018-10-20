@@ -1,166 +1,104 @@
 
+@charset "utf-8";
+/* CSS Document */
+/* Main CSS */
 
 body {
-	background-color:black;
-	margin: 0 auto;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: #484848;
 }
 
-.background {
-    background-color: black;
-    border-style: solid;
-    border-radius: 25px;
-    border-color: blue;
-    padding: 12px;
-    padding-right: 12px;
-    margin: auto;
-	max-width: 900px;
+h2,h3,h4,h5,h6 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    color: #00A8DB;	
 }
 
-.background2 {
-    background-color: red;
-    border-style: solid;
-    border-radius: 25px;
-    border-color: blue;
-    padding: 12px;
-    padding-right: 12px;
-    margin: auto;
-	max-width: 900px;
+h1{
+	font-size: 2.5em;
+	line-height: 1.2em;
 }
 
-.tilt {
-	width: 200px;
+h2{
+	  font-size: 2.25em;
+	  line-height: 1.25em;
 }
 
-.twist {
-	width: 200px;
+h3{
+	  font-size: 2.0em;
+	  line-height: 1.15em;
 }
 
-.scale {
-	width: 200px;
+h4{
+	  font-size: 1.75em;
+	  line-height: 1.10em;
 }
 
-.translate {
-	width: 200px;
+h5{
+	  font-size: 1.50em;
+	  line-height: 1.05em;
 }
 
-header a{
-	color: red;
+h6{
+	  font-size: 1.25em;
+	  line-height: 1em;
 }
 
-a {
-	text-decoration: none;
-	padding: 12px;
-	color: white;
-	margin: auto;
-	font-size: 20px;
+header {
+    text-align: center;
+    max-width:960px !important;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-a:hover{
-	color: red;
+.main_content {
+    max-width:960px !important;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-header{
-	color: blue;
-	text-align: center;
-}
-footer a{
-	color: blue;
-}
-
-footer{
-	color: blue;
-	text-align: center;
-}
-	
-
-b {
-	text-decoration: none;
-	padding: 12px;
-	color: white;
-	margin: auto;
-	font-size: 20px
+footer {
+    text-align: center;
+    max-width:960px !important;
+    margin-right: auto;
+    margin-left: auto;
+	font-size: .8em;
 }
 
-.tilt:hover {
-    transform: rotate(15deg);
+/* Main flexbox */
+
+.main_content {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.twist:hover {
-    transform: skew(30deg, 30deg);
+.col_left {
+    flex:1 45%;
+    padding: 5px 5px 5px 5px;
 }
 
-.scale:hover {
-    transform: scale(2);
+.col_center {
+    flex:1 25%;
+    padding: 5px 5px 5px 5px;
 }
 
-.translate:hover {
-    transform: translate(5em);
+.col_right {
+    flex:1 25%;
+    padding: 5px 5px 5px 5px;
 }
 
+/* Responsive Body */
 
+@media all and (max-width: 960px) {
 
-/* CSS3 Animations************************* */
-
-
-
-
-/* CSS3 Transitions************************* */
-
-
-
-/* Local Storage************************* */
-#storageBox{
-    width: 100px;
-    height: 100px;
-    background: blue;
+.main_content {
+    flex-direction: column;
 }
 
-/* AJAX - JSON************************** */
-img {
-    width: 60%;
-    padding-bottom: 5px;
+.col_left, .col_right {
+        
+/* Return them to document order */
+    order: 0;
 }
-
-#jsonHeader {
-    padding-top: 30px;
-    padding-bottom: 5px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-#slideContainer {
-    width: 100%;
-}
-
-.slider {
-    -webkit-appearance: none;
-    width: 25%;
-    height: 20px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #193bcf;
-    cursor: pointer;
-}
-
-#jsonDetails {
-    padding-bottom: 5px;
-}
-
-#jsonStringOutput {
-    padding-bottom: 20px;
+  
 }
