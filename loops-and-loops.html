@@ -19,7 +19,7 @@
 		
 		function forLoopExample(){
 			loopmessage = "Starting for Loop" + "<br />";
-			var trucks = ["Ford F150", "Honda Ridgeline", "Dodge Ram 1500", "Chevy Silverado", "Toyota Tundra"];
+			var trucks = ["Chevy Silverado 2500", "Audi RS5", "BMW M5", "Ford Explorer", "Toyota Camery"];
 			var count;			
          
 			for (count = 0; count < trucks.length; count++) {
@@ -29,7 +29,7 @@
 			document.getElementById("for-loop-example").innerHTML = loopmessage;
 		}
 		function forInLoopExample(){
-            var person = {fname:"Friedman", lname:"Michael", age:22}; 
+            var person = {fname:"Dynamite", lname:"Napoleon", age:17}; 
             var x;
 			var loopmessage = "Starting for/in Loop" + "<br />";
          
@@ -113,20 +113,22 @@
 		
 		function objectDatatypeExample() {
 			var person = {
-				firstName : "Michael",
-				lastName  : "Friedman",
-				age       : 22,
-				eyeColor  : "Brown"
+				firstName : "Napoleon",
+				lastName  : "Dynamite",
+				age       : 17,
+				loves  : "Ligers"
+				
 			};
 			document.getElementById("object-datatype-example").innerHTML =
-				person.firstName + " " + person.lastName + " is " + person.age + " years old and has " + person.eyeColor + " eyes.";
+				person.firstName + " " + person.lastName + " is " + person.age + " years old and loves " + person.eyeColor + " ligers" ;
 		}
 		
 		function associativeArrayExample() {
 			var person = [];
-			person["firstName"] = "Michael";
-			person["lastName"] = "Friedman";
-			person["age"] = 22; 
+			person["firstName"] = "Napoleon";
+			person["lastName"] = "Dynamite";
+			person["age"] = 17; 
+			person["loves"] = "Ligers";
 			document.getElementById("associative-array-example").innerHTML =
 				person[0] + " " + person.length;
 		}
@@ -143,7 +145,7 @@
 		
         <div class="col_left">
 		<h4>Display a for Loop:</h4>
-		<p>This will display all the trucks in an array.</p>	
+		<p>This will display all the cars in an array.</p>	
 		<p id="for-loop-example"></p>
 		<button onclick="forLoopExample()">Try it</button>
         </div>
