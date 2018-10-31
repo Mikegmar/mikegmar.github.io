@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    font-family: "Roboto";
+    color: grey;
+}
+#btn1 {
+    display: none;
+}
+#bWand {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+#b1,#b2,
+#b3,#b4,#b5,
+#b6,#b7,#b8,
+#b9,#b10 {
+    border: 2px solid white;
+}
+@keyframes flick {
+    0%{
+        transform: rotate(10deg);
+    }
+    100% {transform: rotate(-10deg);
+    }
+}
+@keyframes wobble1 {
+   0% {
+        margin-top: 250px;
+        margin-left:315px;
+        width: 5px;
+        height: 5px;
+   }
+   100% {
+        margin-top: -100px;
+        margin-left:670px;
+        width: 25px;
+        height: 25px;
+   }
+}
+@keyframes wobble2 {
+   0% {
+       margin-top: 150px;
+       margin-left:415px;
+       width: 45px;
+        height: 45px;
+   }
+   100% {
+       margin-top: 100px;
+       margin-left:670px;
+       width: 25px;
+        height: 25px;
+   }
+}
+@keyframes wobble3 {
+   0% {
+       margin-top: 400px;
+       margin-left:315px;
+       width: 5px;
+        height: 5px;
+   }
+   100% {
+       margin-top: 200px;
+       margin-left:670px;
+       width: 65px;
+        height: 65px;
+   }
+}
+@keyframes wobble4 {
+   0% {
+       margin-top: 150px;
+       margin-left:415px;
+       width: 25px;
+        height: 25px;
+   }
+   100% {
+       margin-top: 600px;
+       margin-left:370px;
+       width: 5px;
+        height: 5px;
+   }
+}
+@keyframes wobble5 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 55px;
+    height: 55px;
+   }
+   100% {
+       margin-top: 120px;
+       margin-left:222px;
+       width: 35px;
+        height: 35px;
+   }
+}
+@keyframes wobble6 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 5px;
+        height: 5px;
+   }
+   100% {
+       margin-top: 250px;
+       margin-left:643px;
+       width: 5px;
+        height: 5px;
+   }
+}
+@keyframes wobble7 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 15px;
+        height: 15px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:123px;
+       width: 45px;
+    height: 45px;
+   }
+}
+@keyframes wobble8 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 35px;
+        height: 35px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:533px;
+       width: 25px;
+    height: 25px;
+   }
+}
+@keyframes wobble9 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 65px;
+    height: 65px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:611px;
+       width: 35px;
+    height: 35px;
+   }
+}
+@keyframes wobble10 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 95px;
+        height: 95px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:434px;
+       width: 45px;
+        height: 45px;
+   }
+}
