@@ -1,166 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-    font-family: "Roboto";
-    color: grey;
+@keyframes cloud {
+  1% {
+    opacity: 100;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-#btn1 {
-    display: none;
+.fff{
+    
+  padding: 0px;
+  margin: 0 0 auto;
 }
-#bWand {
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 200px;
+.container {
+  width: 15vw;
+  height: 21vw;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  float:left;
 }
-#b1,#b2,
-#b3,#b4,#b5,
-#b6,#b7,#b8,
-#b9,#b10 {
-    border: 2px solid white;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-@keyframes flick {
-    0%{
-        transform: rotate(10deg);
-    }
-    100% {transform: rotate(-10deg);
-    }
+
+.card {
+  height: 21vw;
+  width: 15vw;
+  border-radius: 10px;
+  margin: 0px;
+  box-shadow: 2px 2px 4px grey;
+  position: relative;
 }
-@keyframes wobble1 {
-   0% {
-        margin-top: 250px;
-        margin-left:315px;
-        width: 5px;
-        height: 5px;
-   }
-   100% {
-        margin-top: -100px;
-        margin-left:670px;
-        width: 25px;
-        height: 25px;
-   }
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s, fill 2s, color 2s;
+  backface-visibility: hidden;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
 }
-@keyframes wobble2 {
-   0% {
-       margin-top: 150px;
-       margin-left:415px;
-       width: 45px;
-        height: 45px;
-   }
-   100% {
-       margin-top: 100px;
-       margin-left:670px;
-       width: 25px;
-        height: 25px;
-   }
+
+.card-front {
+  padding: .5em;
+  background-color: white;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-@keyframes wobble3 {
-   0% {
-       margin-top: 400px;
-       margin-left:315px;
-       width: 5px;
-        height: 5px;
-   }
-   100% {
-       margin-top: 200px;
-       margin-left:670px;
-       width: 65px;
-        height: 65px;
-   }
+
+
+.container.effect:hover .card-back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-@keyframes wobble4 {
-   0% {
-       margin-top: 150px;
-       margin-left:415px;
-       width: 25px;
-        height: 25px;
-   }
-   100% {
-       margin-top: 600px;
-       margin-left:370px;
-       width: 5px;
-        height: 5px;
-   }
+
+.container.effect:hover .card-front {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
 }
-@keyframes wobble5 {
-   0% {
-       margin-top: 250px;
-       margin-left:315px;
-       width: 55px;
-    height: 55px;
-   }
-   100% {
-       margin-top: 120px;
-       margin-left:222px;
-       width: 35px;
-        height: 35px;
-   }
+
+.rect {
+  width: 15vw;
+  height: 21vw;
 }
-@keyframes wobble6 {
-   0% {
-       margin-top: 250px;
-       margin-left:415px;
-       width: 5px;
-        height: 5px;
-   }
-   100% {
-       margin-top: 250px;
-       margin-left:643px;
-       width: 5px;
-        height: 5px;
-   }
+
+
+.rotate {
+  transform: rotate(180deg);
 }
-@keyframes wobble7 {
-   0% {
-       margin-top: 250px;
-       margin-left:315px;
-       width: 15px;
-        height: 15px;
-   }
-   100% {
-       margin-top: -100px;
-       margin-left:123px;
-       width: 45px;
-    height: 45px;
-   }
+
+.card-back{
+    
+  background-image:url("/CIT261/images/card-back.jpg");
 }
-@keyframes wobble8 {
-   0% {
-       margin-top: 250px;
-       margin-left:415px;
-       width: 35px;
-        height: 35px;
-   }
-   100% {
-       margin-top: -100px;
-       margin-left:533px;
-       width: 25px;
-    height: 25px;
-   }
+.first-card {
+  z-index: 1;
+  background-image:url("/CIT261/images/king-of-spades.png");
 }
-@keyframes wobble9 {
-   0% {
-       margin-top: 250px;
-       margin-left:315px;
-       width: 65px;
-    height: 65px;
-   }
-   100% {
-       margin-top: -100px;
-       margin-left:611px;
-       width: 35px;
-    height: 35px;
-   }
+
+.second-card {
+  z-index: 2;
+  background-image: url("/CIT261/images/jack-of-hearts.png");
+  opacity: 0;
 }
-@keyframes wobble10 {
-   0% {
-       margin-top: 250px;
-       margin-left:415px;
-       width: 95px;
-        height: 95px;
-   }
-   100% {
-       margin-top: -100px;
-       margin-left:434px;
-       width: 45px;
-        height: 45px;
-   }
+
+.container.effect:hover .second-card {
+  animation-name: cloud;
+  animation-duration: 2s;
+  fill: black;
+  color: black;
 }
