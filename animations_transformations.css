@@ -81,16 +81,16 @@
 
 .card-back{
     
-  background-image:url("images/card-back.jpg");
+  background-image:url("images/goonies_logo.png");
 }
 .first-card {
   z-index: 1;
-  background-image:url("images/king-of-spades.png");
+  background-image:url("images/chunk_goonies.jpg");
 }
 
 .second-card {
   z-index: 2;
-  background-image: url("images/jack-of-hearts.png");
+  background-image: url("images/data_goonies.jpg");
   opacity: 0;
 }
 
