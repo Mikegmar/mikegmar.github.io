@@ -16,13 +16,13 @@
 		
 		function forLoopExample(){
 			loopmessage = "Starting for Loop" + "<br />";
-			var trucks = ["Chevy Silverado 2500", "Audi RS5", "BMW M5", "Ford Explorer", "Toyota Camery"];
+			var cars = ["Chevy Silverado 2500", "Audi RS5", "BMW M5", "Ford Explorer", "Toyota Camery"];
 			var count;			
          
 			for (count = 0; count < trucks.length; count++) {
-				loopmessage += "Truck " + count + " in array = " + trucks[count] + "<br>";
+				loopmessage += "Car " + count + " in array = " + cars[count] + "<br>";
 			}
-			loopmessage += "Total trucks in array = " + trucks.length + "<br>" + "for Loop stopped!";
+			loopmessage += "Total cars in array = " + cars.length + "<br>" + "for Loop stopped!";
 			document.getElementById("for-loop-example").innerHTML = loopmessage;
 		}
 		function forInLoopExample(){
@@ -188,14 +188,14 @@
 		
         <div class="col_left">
 		<h4>If/Else Condition:</h4>
-		<p>Display a greeting based on the time of day. If it is before 6PM, it will display 'Good day', else it will display 'Good evening'.</p>	
+		<p>Display a greeting based on the time of day. Before 6PM, it will display 'Good day', after 6PM 'Good evening'.</p>	
 		<p id="if-else-condition-example"></p>
 		<button onclick="ifElseConditionExample()">Try it</button>
         </div>
 		
         <div class="col_center">
 		<h4>If/Elseif/Else Condition:</h4>
-		<p>Display a greeting based on the time of day. If it is before 12N, it will display 'Good morning', elseif it is before 6PM it will display 'Good afternoon', else it will display 'Good night'.</p>	
+		<p>Display a greeting based on the time of day. If it is before 12Noon, it will display 'Good morning', if its before 6PM it will display 'Good afternoon', or else 'Good night'.</p>	
 		<p id="if-elseif-else-condition-example"></p>
 		<button onclick="ifElseifElseConditionExample()">Try it</button>
         </div>
