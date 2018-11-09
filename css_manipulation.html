@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+   <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>"Manipulating CSS Class Properties Using JavaScript"</title>
+</head>  
+	
+      <header>
+         <nav>
+        <ul id="menu" class="top">
+          <li><a href="index.html">Home</a></li>		
+        </ul>
+         </nav>           
+      <!-- Custom style for this site -->
+      <link href="/css/style.css" rel="stylesheet">
+      <!--- Custom style sheet for this page --> 
+      <link href="/css/standard_events.css" rel="stylesheet">
+      <!-- Normalize CSS -->
+      <link href="/css/normalize.css" rel="stylesheet">
+   </header>
+   
+   <hr>
+    </header>    
+    <div class="main_content">
+        <div class="col_left">
+		<img id="Chunk_Mikey_Mouth_Data" src="images/goonies.jpg" onmouseout="changeBorderBack()" width="50%" onmouseover="changeBorder()" alt="Michael in Provo" >
+        </div>
+		<div class="col_right" id="buttons">
+			<p><button id="thisButton" class="myButtons" type="button" onclick="doubleHeight()">Click here to double image size</button></p>
+			<p><button class="myButtons" type="button" onclick="returnToNormal()">Click here to go back to normal size</button></p>
+			<p><button class="myButtons" type="button" onclick="changeRadius()">Click here to change border radius</button></p>
+			<p><button class="myButtons" type="button" onclick="changeColor()">Click here to change button color</button></p>
+		</div>
+	</div>
+	<hr>
+  
+ 	            <footer class="site-footer">
+                <p>&copy Mike Mar  |  CIT261  |  © 2018 GitHub, Inc.</p>
+            </footer>
+</body>
+</html> 
+  
+  </body>
+<script src="/javascript/css_manipulation.js"></script>
+</html>
