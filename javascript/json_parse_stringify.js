@@ -34,15 +34,15 @@ function getJSONFile() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             //Convert the JSON text back to an object
-            students = JSON.parse(this.responseText);
-            buildStudents();
+            goonies = JSON.parse(this.responseText);
+            buildGoonies();
         }
     }
     xhttp.send();   
 }
 
-//  Display all the student records in the JSON object array.
-function showStudent(i){
+//  Display all the goonies records in the JSON object array.
+function showGoonies(i){
     var result = "<h4>You Selected Goonies #" + i + "</h4><p><b>Name: </b>" + students.records[i-1].firstName + " " + goonies.records[i-1].lastName + "</p><p><b>Phone: </b>" + goonies.records[i-1].cell + "</p>";
     document.getElementById("div_goonies_details").innerHTML = result;
 }
