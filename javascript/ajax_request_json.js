@@ -1,4 +1,4 @@
-var students = null;
+var goonies = null;
             
 // Issue the XMLHttpRequest object to call webserver and retrieve classlist.html JSON file
 function getJSONFile() {
@@ -7,22 +7,22 @@ function getJSONFile() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             //Convert the JSON text back to an object
-            students = JSON.parse(this.responseText);
-            showStudents();
+            goonies = JSON.parse(this.responseText);
+            showGoonies();
         }
     }
     xhttp.send();   
 }
 
-//  Display all the student records in the JSON object array.
-function showStudents(){
+//  Display all the goonies records in the JSON object array.
+function showGoonies(){
     var result = ""; 
     
-    for(var i = 0; i < students.records.length; i++){
+    for(var i = 0; i < goonies.records.length; i++){
           
-        result += "<p><b>Name: </b>" + students.records[i].firstName + " " + students.records[i].lastName + ", <b>Phone: </b>" + students.records[i].cell + "</p>";
+        result += "<p><b>Name: </b>" + goonies.records[i].firstName + " " + goonies.records[i].lastName + ", <b>Phone: </b>" + goonies.records[i].cell + "</p>";
     }
-    document.getElementById("div_students").innerHTML = result;
+    document.getElementById("div_goonies").innerHTML = result;
 }
 
 //  Add a new contact to the JSON object array.
@@ -33,6 +33,6 @@ function AddToJSONFile(){
         this.cell = document.getElementById('input_cell').value;
     }
     
-    students.records.push(l);
-    showStudents();
+    goonies.records.push(l);
+    showGoonies();
 }
