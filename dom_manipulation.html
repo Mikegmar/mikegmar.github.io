@@ -27,7 +27,7 @@
             // Use the XMLHttpRequest object to call my webserver and retrieve GOONIESLIST.html file.
             function getJSONFile() {
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("GET", "/JSON/goonieslist.html", true);
+                xhttp.open("GET", "/JSON/gooniesList.html", true);
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         goonies = null;
