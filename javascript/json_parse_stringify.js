@@ -43,16 +43,16 @@ function getJSONFile() {
 
 //  Display all the student records in the JSON object array.
 function showStudent(i){
-    var result = "<h4>You Selected Student #" + i + "</h4><p><b>Name: </b>" + students.records[i-1].firstName + " " + students.records[i-1].lastName + "</p><p><b>Phone: </b>" + students.records[i-1].cell + "</p>";
-    document.getElementById("div_student_details").innerHTML = result;
+    var result = "<h4>You Selected Goonies #" + i + "</h4><p><b>Name: </b>" + students.records[i-1].firstName + " " + goonies.records[i-1].lastName + "</p><p><b>Phone: </b>" + goonies.records[i-1].cell + "</p>";
+    document.getElementById("div_goonies_details").innerHTML = result;
 }
 
-// Generate the select student drop down element with all the data
-// from the students object
-function buildStudents(){
-    var result = "<br><select id=\"select_student\" onchange=\"showStudent(this.selectedIndex)\"><option value=\"-1\">Please Select a Student Name...</option>"; 
-    for(var i = 0; i < students.records.length; i++){
-        result += "<option value=\"0\">" + students.records[i].firstName + " " + students.records[i].lastName + "</option>";
+// Generate the select goonies drop down element with all the data
+// from the goonies object
+function buildGoonies(){
+    var result = "<br><select id=\"select_goonies\" onchange=\"showGoonies(this.selectedIndex)\"><option value=\"-1\">Please Select a Student Name...</option>"; 
+    for(var i = 0; i < goonies.records.length; i++){
+        result += "<option value=\"0\">" + goonies.records[i].firstName + " " + goonies.records[i].lastName + "</option>";
     }
-    document.getElementById("div_students").innerHTML = result + "</select>";
+    document.getElementById("div_goonies").innerHTML = result + "</select>";
 }
