@@ -24,10 +24,10 @@
             //==============================================================================
             //BEGINNING OF Functions
             //==============================================================================
-            // Use the XMLHttpRequest object to call my webserver and retrieve CLASSLIST.html file.
+            // Use the XMLHttpRequest object to call my webserver and retrieve GOONIESLIST.html file.
             function getJSONFile() {
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("GET", "/CIT261/json/classlist.html", true);
+                xhttp.open("GET", "/JSON/goonieslist.html", true);
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         goonies = null;
@@ -45,7 +45,7 @@
                 goonies.records.splice(i,1);
                 showGoonies();
             }
-            // Use the XMLHttpRequest object to call webserver and retrieve the CLASSLIST.html JSON file.
+            // Use the XMLHttpRequest object to call webserver and retrieve the GOONIESLIST.html JSON file.
             function showGoonies(){
                 document.getElementById("div_goonies").innerHTML = "";
                 var result = ""; 
@@ -53,13 +53,13 @@
                     for(var i = 0; i < goonies.records.length; i++){
                         var divGoonies = document.createElement("div");
                         var divInfo = document.createElement("div");
-                        divInfo.classList.add('width75');
+                        divInfo.gooniesList.add('width75');
                         var textnode = document.createTextNode("Name: " + goonies.records[i].firstName + " " + goonies.records[i].lastName + ", Phone: " + goonies.records[i].cell);
      
                         divInfo.appendChild(textnode);
             
 //                       var divRemove = document.createElement("div");
-//                        divRemove.classList.add('width25');
+//                        divRemove.gooniesList.add('width25');
 //                        divRemove.innerHTML = '<input type="button" value="Remove Goonies" onclick="deleteGoonies(\''+i+'\')">';
                         
                           divGoonies.appendChild(divInfo);
