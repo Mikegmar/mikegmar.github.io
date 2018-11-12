@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-us">
+   <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>"Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects"</title>	
+      
+      <!-- Custom style for this site -->
+      <link href="/css/style.css" rel="stylesheet">      
+	      
+      <!-- Normalize CSS -->
+      <link href="/css/normalize.css" rel="stylesheet">
+      
+             <script>
+            //==============================================================================
+            // BEGINNING OF Variables
+            //==============================================================================
+            var goonies = null;
+            // Keeps consistency for the naming of local storage identifier for goonies JSON text
+            var sName = "goonies";
+            //==============================================================================
+            // END OF Variables
+            //==============================================================================
+            //==============================================================================
+            // BEGINNING OF Fuctions
+            //==============================================================================
+            // Use XMLHttpRequest object to call my webserver and retrieve JSON/gooniesList.html file.
+            function getJSONFile() {
+                var xhttp = new XMLHttpRequest();
+                
+                xhttp.open("GET", "/JSON/gooniesList.html", true);
+                
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        goonies = null;
+                        
+                        getGooniesFromLocalStorage();
+                        
+                        if(goonies == null){
+                            //Convert the JSON text back to an object
+                            goonies = JSON.parse(this.responseText);
+                            saveGonniesToLocalStorage();
+                            showGoonies("Goonies from Server");
+                        }
+                        else
+                        {
+                            alert("You already have goonies saved locally. \nWe will not overwrite them.\nInstead, we will just show students pulled from the server.");
+                            
+                            //Convert the JSON text back to an object
+                            goonies = JSON.parse(this.responseText);
+                            
+                            showGoonies("Goonies from Server");
+                        }
+                    }
+                }
+                xhttp.send();   
+            }
+            // Save goonies object as JSON text to the local storage.
+            function saveGooniesToLocalStorage(){
+                localStorage.setItem(sName, JSON.stringify(goonies));
+            }
+            // Retrieves my goonies object as JSON text to the local storage.
+            function getGooniesFromLocalStorage(){
+                goonies = JSON.parse(localStorage.getItem(sName));
+            }
+            // Clear the local storage goonies record.
+            function clearLocalGoonies(){
+                localStorage.removeItem(sName);
+                goonies = null;
+                showGoonies("Deleted Goonies List from Local Storage");
+            }
+            // Clear the screen display area of all record.
+            function clearDisplay(){
+                document.getElementById("div_goonies").innerHTML = "<h4>Goonies Display Area Cleared</h4>";
+            }
+            // handle the request from the user to get the goonies from local storage and display them 
+            function getLocalGoonies(){
+                getGooniesFromLocalStorage();
+                if(goonies == null){
+                    alert("You do not have any goonies saved localy.\nPlease pull goonies from the server.");
+                }
+                showGoonies("Goonies from Local Storage");
+            }
+            // Display all the goonies in the JSON object array.
+            function showGoonies(display_banner){
+                var result = "<h4>" + display_banner + "</h4>"; 
+                try{
+                    for(var i = 0; i < goonies.records.length; i++){
+          
+                        result += "<p><b>Name: </b>" + goonies.records[i].firstName + " " + goonies.records[i].lastName + ", <b>Phone: </b>" + goonies.records[i].cell + "</p>";
+                    }
+                }catch(e){}
+                finally{
+                        document.getElementById("div_goonies").innerHTML = result;
+                }
+            }
+            // Add a new goonies to the JSON object array.
+            function addToJSONFile(){
+                var l = new function(){
+                    this.firstName = document.getElementById('goonies_first_name').value;
+                    this.lastName = document.getElementById('goonies_last_name').value;
+                    this.cell = document.getElementById('goonies_cell').value;
+                }
+    
+                goonies.records.push(l);
+                saveGooniesToLocalStorage();
+                showGoonies("Goonies from Local Storage");
+            }
+            //==============================================================================
+            // END OF Functions
+            //==============================================================================
+            
+        </script>
+   </head>
+   
+   	<header>
+	   
+         <nav>
+        <ul id="menu" class="top">
+          <li><a href="index.html">Home</a></li>		
+        </ul>
+         </nav>    
+         
+        </header>
+   
+   <hr>
+    </header>    
+	<header>
+	<h3>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h3>
+        <hr>
+	</header>
+  
+  
+  
+  
+  
+         <main>
+            <div class="main_content">
+                <div class="col_left">
+                <fieldset>
+                    <p><input type="button" onclick="getJSONFile()" value="Retrieve Goonies List From Server" >
+                    </p>
+                    <p><input type="button" onclick="getLocalGoonies()" value="Retrieve Goonies List From Local Storage" >
+                    </p>
+                    <p><input type="button" onclick="clearLocalGoonies()" value="Clear Goonies List from Local Storage" >
+                    </p>
+                    <p><input type="button" onclick="clearDisplay()" value="Clear Display" >
+                    </p>                    
+                    <div id="div_goonies"></div>
+                </fieldset>
+                </div>
+                <div class="col_right">
+                <fieldset>
+                    <div><p>First Name: <input id="goonies_first_name" type="text" /></p><p>Last Name: <input id="goonies_last_name"  type="text" /></p><p>Phone: <input id="goonies_cell" type="text" /></p></div>
+                    <input type="button" onclick="addToJSONFile()" value="Add Goonies" > 
+                </fieldset>
+                </div>
+            </div>
+        </main>
+        
+        	<hr>
+  
+ 	            <footer class="site-footer">
+                <p>&copy Mike Mar  |  CIT261  |  © 2018 GitHub, Inc.</p>
+            </footer>
+</body>
+</html> 
+  
+  </body>
+</html>
