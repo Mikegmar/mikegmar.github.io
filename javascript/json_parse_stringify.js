@@ -1,4 +1,4 @@
-var students = null;
+var goonies = null;
             
 // Create an AJAX object based on the various browser methods.
 function createAJAXObj() {
@@ -43,14 +43,14 @@ function getJSONFile() {
 
 //  Display all the goonies records in the JSON object array.
 function showGoonies(i){
-    var result = "<h4>You Selected Goonies #" + i + "</h4><p><b>Name: </b>" + students.records[i-1].firstName + " " + goonies.records[i-1].lastName + "</p><p><b>Phone: </b>" + goonies.records[i-1].cell + "</p>";
+    var result = "<h4>You Selected Goonies #" + i + "</h4><p><b>Name: </b>" + goonies.records[i-1].firstName + " " + goonies.records[i-1].lastName + "</p><p><b>Phone: </b>" + goonies.records[i-1].cell + "</p>";
     document.getElementById("div_goonies_details").innerHTML = result;
 }
 
 // Generate the select goonies drop down element with all the data
 // from the goonies object
 function buildGoonies(){
-    var result = "<br><select id=\"select_goonies\" onchange=\"showGoonies(this.selectedIndex)\"><option value=\"-1\">Please Select a Student Name...</option>"; 
+    var result = "<br><select id=\"select_goonies\" onchange=\"showGoonies(this.selectedIndex)\"><option value=\"-1\">Please Select a Goonies Name...</option>"; 
     for(var i = 0; i < goonies.records.length; i++){
         result += "<option value=\"0\">" + goonies.records[i].firstName + " " + goonies.records[i].lastName + "</option>";
     }
