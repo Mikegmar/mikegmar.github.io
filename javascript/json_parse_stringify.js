@@ -27,10 +27,10 @@ function createAJAXObj() {
     return xmlHttp;
 }
 
-// Issue the XMLHttpRequest object to call webserver and retrieve gooniesList.html JSON file
+// Issue the XMLHttpRequest object to call webserver and retrieve ThegooniesList.html JSON file
 function getJSONFile() {
     var xhttp = createAJAXObj();
-    xhttp.open("GET", "/JSON/gooniesList.html", true);
+    xhttp.open("GET", "/JSON/ThegooniesList.html", true);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             //Convert the JSON text back to an object
