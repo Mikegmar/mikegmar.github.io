@@ -97,9 +97,9 @@
             // Add a new goonies to the JSON object array.
             function addToJSONFile(){
                 var l = new function(){
-                    this.firstName = document.getElementById('goonies_first_name').value;
-                    this.lastName = document.getElementById('goonies_last_name').value;
-                    this.cell = document.getElementById('goonies_cell').value;
+                    this.firstName = document.getElementById('goonie_first_name').value;
+                    this.lastName = document.getElementById('goonie_last_name').value;
+                    this.cell = document.getElementById('goonie_cell').value;
                 }
     
                 goonies.records.push(l);
@@ -151,8 +151,8 @@
                 </div>
                 <div class="col_right">
                 <fieldset>
-                    <div><p>First Name: <input id="goonies_first_name" type="text" /></p><p>Last Name: <input id="goonies_last_name"  type="text" /></p><p>Phone: <input id="goonies_cell" type="text" /></p></div>
-                    <input type="button" onclick="addToJSONFile()" value="Add Goonies" > 
+                    <div><p>First Name: <input id="goonie_first_name" type="text" /></p><p>Last Name: <input id="goonie_last_name"  type="text" /></p><p>Phone: <input id="goonie_cell" type="text" /></p></div>
+                    <input type="button" onclick="addToJSONFile()" value="Add Goonie" > 
                 </fieldset>
                 </div>
             </div>
