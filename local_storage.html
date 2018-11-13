@@ -24,11 +24,11 @@
             //==============================================================================
             // BEGINNING OF Fuctions
             //==============================================================================
-            // Use XMLHttpRequest object to call my webserver and retrieve JSON/gooniesList.html file.
+            // Use XMLHttpRequest object to call my webserver and retrieve JSON/ThegooniesList.html file.
             function getJSONFile() {
                 var xhttp = new XMLHttpRequest();
                 
-                xhttp.open("GET", "/JSON/gooniesList.html", true);
+                xhttp.open("GET", "/JSON/ThegooniesList.html", true);
                 
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
