@@ -1,0 +1,39 @@
+#translate:hover {
+    transform: translate3d(100px, -10em, 100px);
+}
+
+#scale:hover {
+    transform: scale3d(1.5,1.5,0.75);
+}
+
+#scale1:hover {
+    transform: scale3d(4.5, 3.6, 3.2);
+}
+
+#scale2:hover {
+    transform: scale3d(2, -1.6, 0.5);
+}
+
+#rotare:hover {
+    transform: rotateX(-20deg) rotateY(-40deg) perspective(600px);
+}
+
+#rotare1:hover {
+    transform:rotateX(105deg) rotateY(32deg) rotateZ(287deg);
+}
+
+#skew:hover {
+    transform:skew(139deg, 17deg);
+}
+
+#skew1:hover {
+    transform:skew(139deg, -17deg);
+}
+#muntiple:hover {
+    transform: rotateX(11deg) rotateY(114deg) rotateZ(78deg);
+    transform: skew(3deg, 11deg);
+}
+#muntiple1:hover {
+    transform: translate3d(100px, 176px, 90px);
+    transform: skew(10deg, 11deg);
+}
