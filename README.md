@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Mikegmar/mikegmar.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mikegmar/mikegmar.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+Object Creation Functions, Inheritance, Properties, Methods, Instantiation
+JSON Parse, Stringify
+Using XMLHTTPRequest to Consume a JSON Web Service
+Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
+DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.
+Manipulating CSS Class Properties Using JavaScript
+Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
+Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events
+HTML5 Tags - Video, Audio, and Canvas
+Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)
+Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)
+Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)
