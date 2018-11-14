@@ -1,0 +1,36 @@
+#translate:hover {
+    transform:translate(1000px);
+}
+
+#scale:hover { 
+    transform:scale(1,0.5);
+}
+
+#scale1:hover {
+    transform: scale(0.5, 2);
+}
+
+#scale2:hover {
+    transform: scale(-1, 1.5);
+}
+
+#rotare:hover {
+    transform:rotate(45deg);
+}
+#rotare1:hover {
+    transform:rotate(-30deg);
+}
+
+#skew:hover {
+    transform:skew(35deg);
+}
+
+#skew1:hover {
+    transform:skew(-30deg);
+}
+#muntiple:hover {
+    transform: rotate(-20deg) skewX(-10deg) scale(0.8);
+}
+#muntiple1:hover {
+    transform: matrix(1.2,0.2,0.15,1,-50,10);
+}
