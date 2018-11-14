@@ -99,5 +99,9 @@ footer {
 /* Return them to document order */
     order: 0;
 }
-  
+ img {
+    width: 210px;
+    height:100px;
+    transition: 1s ease-in-out;
+} 
 }
