@@ -42,7 +42,7 @@ function getJSONFile() {
 }
 
 //  Display all the goonies records in the JSON object array.
-function showGoonies(i){
+function showGoonie(i){
     var result = "<h4>You Selected Goonie #" + i + "</h4><p><b>Name: </b>" + goonies.records[i-1].firstName + " " + goonies.records[i-1].lastName + "</p><p><b>Phone: </b>" + goonies.records[i-1].cell + "</p>";
     document.getElementById("div_goonie_details").innerHTML = result;
 }
