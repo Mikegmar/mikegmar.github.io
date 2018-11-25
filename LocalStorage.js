@@ -96,19 +96,13 @@ window.onload = function() {
 		
 		switch (userOptions.quote) {
 			case "president":
-				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face. - Ronald W. Reagan";
-				break;				
-			case "mikey":
-				doc.getElementById("chosenQuote").innerHTML = "Don't say that,  never say that. Goonies never say die. - Mikey Walsh";
-				break;			
-			case "data":
-				doc.getElementById("chosenQuote").innerHTML = "Pinchers of Peril. Hey guys, I'm saved by my Pinchers of Peril. - Data Wang";
+				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
 				break;
-			case "chunk":
-				doc.getElementById("chosenQuote").innerHTML = "I like the dark. I love the dark. But I hate nature. I hate nature. - Chunk Cohen";
+			case "actions":
+				doc.getElementById("chosenQuote").innerHTML = '"Desires dictate our Priorities, priorities shape our Choices, and choices determine our Actions" - Dallin H. Oaks';
 				break;
-			case "sloth":
-				doc.getElementById("chosenQuote").innerHTML = "Ruth, Ruth, Ruth. Baby Ruth. - Sloth Fratelli";
+			case "try":
+				doc.getElementById("chosenQuote").innerHTML = '"Our greatest weakness lies in giving up.  The most certain way to succeed is always to try just one more time." - Thomas A. Edison';
 				break;
 		}
         		
