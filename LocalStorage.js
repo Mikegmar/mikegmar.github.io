@@ -96,19 +96,19 @@ window.onload = function() {
 		
 		switch (userOptions.quote) {
 			case "president":
-				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
+				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face. - Ronald W. Reagan";
 				break;				
 			case "mikey":
-				doc.getElementById("chosenQuote").innerHTML = "Don't say that,  never say that. Goonies never say die. - Mikey";
+				doc.getElementById("chosenQuote").innerHTML = "Don't say that,  never say that. Goonies never say die. - Mikey Walsh";
 				break;			
 			case "data":
-				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril. Hey guys, I'm saved by my Pinchers of Peril." - Data';
+				doc.getElementById("chosenQuote").innerHTML = "Pinchers of Peril. Hey guys, I'm saved by my Pinchers of Peril. - Data Wang";
 				break;
 			case "chunk":
-				doc.getElementById("chosenQuote").innerHTML = '"I like the dark. I love the dark. But I hate nature. I hate nature." - Chunk';
+				doc.getElementById("chosenQuote").innerHTML = "I like the dark. I love the dark. But I hate nature. I hate nature. - Chunk Cohen";
 				break;
 			case "sloth":
-				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Ruth. Baby Ruth." - Sloth';
+				doc.getElementById("chosenQuote").innerHTML = "Ruth, Ruth, Ruth. Baby Ruth. - Sloth Fratelli";
 				break;
 		}
         		
