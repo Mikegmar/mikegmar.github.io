@@ -97,12 +97,18 @@ window.onload = function() {
 		switch (userOptions.quote) {
 			case "president":
 				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
+				break;		
+			case "goonie1":
+				doc.getElementById("chosenQuote").innerHTML = '"Don't say that, never say that! Goonies never say die!." - Mikey';
 				break;
-			case "actions":
-				doc.getElementById("chosenQuote").innerHTML = '"Desires dictate our Priorities, priorities shape our Choices, and choices determine our Actions" - Dallin H. Oaks';
+			case "goonie2":
+				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril! Hey guys, I'm saved by my Pinchers of Peril!." - Data';
 				break;
-			case "try":
-				doc.getElementById("chosenQuote").innerHTML = '"Our greatest weakness lies in giving up.  The most certain way to succeed is always to try just one more time." - Thomas A. Edison';
+			case "goonie3":
+				doc.getElementById("chosenQuote").innerHTML = '"I like the dark. I love the dark. But I hate nature. I hate nature!." - Chunk';
+				break;
+			case "goonie4":
+				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Ruth! Baby Ruth!." - Sloth';
 				break;
 		}
         		
