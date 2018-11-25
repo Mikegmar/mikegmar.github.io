@@ -105,21 +105,6 @@ window.onload = function() {
 			case "sloth":
 				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Baby Ruth." - Sloth';
 				break;
-			case "mouth":
-				doc.getElementById("chosenQuote").innerHTML = '"Jerk alert." - Mouth';
-				break;
-			case "andy":
-				doc.getElementById("chosenQuote").innerHTML = '"I hit a wrong not. I am not Liberace you know." - Andy';
-				break;
-			case "data":
-				doc.getElementById("chosenQuote").innerHTML = '"Hey guys, I am saved by my Pinchers of Peril." - Data';
-				break;
-			case "stef":
-				doc.getElementById("chosenQuote").innerHTML = '"This is ridiculous. I feel like I am babysitting, except I am not getting paid." - Stef';
-				break;
-			case "brand":
-				doc.getElementById("chosenQuote").innerHTML = '"I am going to hit you so hard that when you wake up, your clothes will be out of style." - Brand';
-				break;
 		}
         		
 		switch (userOptions.size) {
