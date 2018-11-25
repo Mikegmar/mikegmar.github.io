@@ -99,7 +99,7 @@ window.onload = function() {
 				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
 				break;
 			case "mikey":
-				doc.getElementById("chosenQuote").innerHTML = '"Desires dictate our Priorities, priorities shape our Choices, and choices determine our Actions" - Dallin H. Oaks';
+				doc.getElementById("chosenQuote").innerHTML = '"Goonies never say die" - Mikey';
 				break;
 			case "try":
 				doc.getElementById("chosenQuote").innerHTML = '"Our greatest weakness lies in giving up.  The most certain way to succeed is always to try just one more time." - Thomas A. Edison';
