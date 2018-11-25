@@ -99,7 +99,7 @@ window.onload = function() {
 				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
 				break;				
 			case "mikey":
-				doc.getElementById("chosenQuote").innerHTML = '"Don't say that,  never say that. Goonies never say die." - Mikey';
+				doc.getElementById("chosenQuote").innerHTML = "Don't say that,  never say that. Goonies never say die. - Mikey";
 				break;			
 			case "data":
 				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril. Hey guys, I'm saved by my Pinchers of Peril." - Data';
