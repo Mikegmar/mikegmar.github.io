@@ -98,7 +98,7 @@ window.onload = function() {
 			case "president":
 				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
 				break;
-			case "actions":
+			case "mikey":
 				doc.getElementById("chosenQuote").innerHTML = '"Desires dictate our Priorities, priorities shape our Choices, and choices determine our Actions" - Dallin H. Oaks';
 				break;
 			case "try":
