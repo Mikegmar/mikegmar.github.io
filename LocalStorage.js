@@ -95,7 +95,9 @@ window.onload = function() {
 		
 		
 		switch (userOptions.quote) {
-				
+			case "president":
+				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
+				break;				
 			case "gonnies1":
 				doc.getElementById("chosenQuote").innerHTML = '"Don't say that, never say that! Goonies never say die." - Mikey';
 				break;			
