@@ -95,14 +95,15 @@ window.onload = function() {
 		
 		
 		switch (userOptions.quote) {
-			case "president":
-				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
-				break;
+		
 			case "mikey":
-				doc.getElementById("chosenQuote").innerHTML = '"Goonies never say die" - Mikey';
+				doc.getElementById("chosenQuote").innerHTML = '"Goonies never say die." - Mikey';
 				break;
-			case "try":
-				doc.getElementById("chosenQuote").innerHTML = '"Our greatest weakness lies in giving up.  The most certain way to succeed is always to try just one more time." - Thomas A. Edison';
+			case "chunk":
+				doc.getElementById("chosenQuote").innerHTML = '"I love the dark, but I hate nature." - Chunk';
+				break;
+			case "sloth":
+				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Baby Ruth." - Sloth';
 				break;
 		}
         		
