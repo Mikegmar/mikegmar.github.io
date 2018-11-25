@@ -98,16 +98,16 @@ window.onload = function() {
 			case "president":
 				doc.getElementById("chosenQuote").innerHTML = '"Within the covers of the Bible are the answers for all the problems men face." - Ronald W. Reagan';
 				break;				
-			case "gonnies1":
-				doc.getElementById("chosenQuote").innerHTML = '"Don't say that, never say that! Goonies never say die." - Mikey';
+			case "mikey":
+				doc.getElementById("chosenQuote").innerHTML = '"Don't say that,  never say that. Goonies never say die." - Mikey';
 				break;			
-			case "goonies2":
+			case "data":
 				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril. Hey guys, I'm saved by my Pinchers of Peril." - Data';
 				break;
-			case "goonies3":
+			case "chunk":
 				doc.getElementById("chosenQuote").innerHTML = '"I like the dark. I love the dark. But I hate nature. I hate nature." - Chunk';
 				break;
-			case "goonies4":
+			case "sloth":
 				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Ruth. Baby Ruth." - Sloth';
 				break;
 		}
