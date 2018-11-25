@@ -97,13 +97,13 @@ window.onload = function() {
 		switch (userOptions.quote) {
 				
 			case "Mikey":
-				doc.getElementById("chosenQuote").innerHTML = '"Don't say that, never say that! Goonies never say die!." - Mikey';
+				doc.getElementById("chosenQuote").innerHTML = '"Don't say that, never say that! Goonies never say die." - Mikey';
 				break;
 			case "Data":
-				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril! Hey guys, I'm saved by my Pinchers of Peril!." - Data';
+				doc.getElementById("chosenQuote").innerHTML = '"Pinchers of Peril! Hey guys, I'm saved by my Pinchers of Peril." - Data';
 				break;
 			case "Chunk":
-				doc.getElementById("chosenQuote").innerHTML = '"I like the dark. I love the dark. But I hate nature. I hate nature!." - Chunk';
+				doc.getElementById("chosenQuote").innerHTML = '"I like the dark. I love the dark. But I hate nature. I hate nature." - Chunk';
 				break;
 			case "Sloth":
 				doc.getElementById("chosenQuote").innerHTML = '"Ruth, Ruth, Ruth! Baby Ruth!." - Sloth';
