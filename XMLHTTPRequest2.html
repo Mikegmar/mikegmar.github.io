@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>XMLHttpRequest</h2>
+
+<div>
+<button type="button" onclick="text()">Display Text</button>
+<br>
+<button type="button" onclick="json()">Display JSON</button>
+<br>
+<button type="button" onclick="xml()">Display XML</button>
+<br>
+<button type="button" onclick="html()">Display HTML</button>
+
+</div>
+
+<div id="demo"></div>
+
+<script>
+
+function text() {
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  request.open("GET", "hello_world.txt", true);
+  request.send();
+}
+
+function json() {
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  request.open("GET", "breakfast.json", true);
+  request.send();
+}
+
+function xml() {
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  request.open("GET", "menu.xml", true);
+  request.send();
+}
+
+function html() {
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  request.open("GET", "video.html", true);
+  request.send();
+}
+
+</script>
+
+</body>
+</html>
