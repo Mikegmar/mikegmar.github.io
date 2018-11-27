@@ -3,8 +3,7 @@
   
     <head>
 	<meta charset="UTF-8">	 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta name="description" content="Using XMLHTTPRequest to Consume a JSON Web Service">    
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 	   
         <title>Using XMLHTTPRequest to Consume a JSON Web Service</title>            
     
         <!-- Custom style for this site -->
@@ -18,39 +17,24 @@
           <li><a href="index.html">Home</a></li>		
         </ul>
 	</nav>
-        </header>
-	</br>
+        </header>	
 
               <header>
 		
             <h3>Using XMLHTTPRequest to Consume a JSON Web Service</h3>
             <hr>
 			
-	
-	
-        </header>
+	        </header>
         
 	<body>
 
 
 
-
-
-
-
-
-<main>
-      <h1>Topic 4. Using XMLHTTPRequest to Consume a JSON Web Service</h1>
+<main>      
       <section>
-        <h2>XMLHTTPRequest</h2>
-        <p>An XMLHTTPRequest provides a way to update part of a webpage without having to reload the whole page. The XMLHTTPRequest object calls a webservice, and when the response is ready, it can be used to update the webpage. </p>
-        <p>XMLHTTPRequests can run synchronously or asynchronously. If it runs synchronously, functions on the webpage will wait until response has been received before continuing. If asynchronous, the request will run in the background, so the rest of the webpage can continue to function. Once the response has been fully received, the onreadystatechange function will run.</p>
-        <h3>Consuming a JSON Web Service</h3>
-        <p>There are web services, or Application Program Intefaces (API) that provide information for use in websites and apps. The information is obtained using an XMLHTTPRequest. The information is requested using a URL that has the address of the API, as well as parameters that specify what information is desired. Some API's are free, and some require payment. The information is received in JSON format and needs to be parsed using JSON.parse.</p>
-        <h3>Format</h3>
-        <h4>Synchronous</h4>
-        <p>Let's look at a simple synchronous XMLHTTPRequest. First create a new XMLHTTPRequest object, initialize the request using .open(), send the request, and add a block for code of what to do with the response..</p>
-        <div class="code">
+        <h1>XMLHTTPRequest</h1>
+	      <hr>
+      <div class="code">
           <code><br>
             let xhr = new XMLHttpRequest();<br> 
             xhr.open("GET", url, false);<br>
