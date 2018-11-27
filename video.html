@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    
+    <style>
+      /* Place CSS Styling here */
+    </style>
+  </head>
+
+  <body>
+    <h4>Javascript Video Demo</h4>
+    <div>
+      <video id="video" width="320" height="240" poster="poster.png">
+        <source src="Loops, functions, arrays, conditional statements.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div>
+      <button type="button" onclick="playVideo()" id="playVideo">Play</button>
+      <button type="button" onclick="pauseVideo()" id="pauseVideo">Pause</button>
+      <button type="button" onclick="ResetVideo()" id="ResetVideo">Reset</button>
+    </div>
+    <br>
+    <div>
+
+    </div>
+
+    <h4>Javascript Audio Demo</h4>
+    <div>
+      <audio id="audio">
+        <source src="audio.m4a" type="audio/mpeg">
+      </audio>
+    </div>
+    <div>
+      <button type="button" onclick="playAudio()" id="playAudio">Play Audio</button>
+      <button type="button" onclick="pauseAudio()" id="pauseAudio">Pause Audio</button>
+      <button type="button" onclick="ResetAudio()" id="ResetAudio">Reset Audio</button>
+    </div>
+    <br>
+    <h4>Javascript Canvas</h4>
+    <button type="button" onclick="draw()" id="head">Head</button>
+    <button type="button" onclick="eyes()" id="eyes">Eyes</button>
+    <button type="button" onclick="mouth()" id="mouth">Mouth</button>
+    <button type="button" onclick="nose()" id="nose">Nose</button>
+    <button type="button" onclick="stickBody()" id="body">Body</button>
+    <button type="button" onclick="arms()" id="arms">Arms</button>
+    <button type="button" onclick="legs()" id="legs">Legs</button>
+    <br>
+    <br>
+    <canvas id="canvas" width="200" height="250" style="border:1px solid #d3d3d3;">
+    <div>
+
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+    //Place JavaScript Functions here
+    
+    //Global Variables
+    var video = document.getElementById('video');
+    var audio = document.getElementById('audio');
+    //Play Video Function
+    function playVideo(){
+      video.play();
+    }
+    //Reset Video Function
+    function ResetVideo(){
+      video.load();
+    }
+    //Pause Video Function
+    function pauseVideo(){
+      video.pause();
+    }
+    //Play Audio Function
+    function playAudio(){
+      audio.play();
+    }
+    //Reset Audio Function
+    function ResetAudio(){
+      audio.load();
+    }
+    //Pause Audio Function
+    function pauseAudio(){
+      audio.pause();
+    }
+    function draw(){
+    var head = document.getElementById("canvas");
+    var drawHead = head.getContext("2d");
+    drawHead.beginPath();
+    drawHead.arc(100,50,40,0,2*Math.PI);
+    drawHead.stroke();
+    }
+    function eyes(){
+    var leftEye = document.getElementById("canvas");
+    var drawLeftEye = canvas.getContext("2d");
+    drawLeftEye.beginPath();
+    drawLeftEye.arc(85,35,5,0,2*Math.PI);
+    drawLeftEye.stroke();
+    var rightEye = document.getElementById("canvas");
+    var drawRightEye = canvas.getContext("2d");
+    drawRightEye.beginPath();
+    drawRightEye.arc(115,35,5,0,2*Math.PI);
+    drawRightEye.stroke();
+    }
+    function mouth(){
+    var mouth = document.getElementById("canvas");
+    var drawMouth = mouth.getContext("2d");
+    drawMouth.beginPath();
+    drawMouth.arc(100,40,30,1,2);
+    drawMouth.stroke();
+    }
+    function nose(){
+      var nose = document.getElementById("canvas");
+      var drawNose = nose.getContext("2d");
+      drawNose.moveTo(100,45);
+      drawNose.lineTo(100,55);
+      drawNose.stroke();
+    }
+    function stickBody(){
+      var body = document.getElementById("canvas");
+      var ctx = body.getContext("2d");
+      ctx.moveTo(100,90);
+      ctx.lineTo(100,150);
+      ctx.stroke();
+    }
+    function arms(){
+      var body = document.getElementById("canvas");
+      var ctx = body.getContext("2d");
+      ctx.moveTo(130,105);
+      ctx.lineTo(70,105);
+      ctx.stroke();
+    }
+    function legs(){
+      var leftLeg = document.getElementById("canvas");
+      var drawLeftLeg = leftLeg.getContext("2d");
+      drawLeftLeg.moveTo(100,150);
+      drawLeftLeg.lineTo(115,180);
+      drawLeftLeg.stroke();
+      var rightLeg = document.getElementById("canvas");
+      var drawRightLeg = rightLeg.getContext("2d");
+      drawRightLeg.moveTo(100,150);
+      drawRightLeg.lineTo(75,180);
+      drawRightLeg.stroke();
+    }
+  </script>
+</html>
