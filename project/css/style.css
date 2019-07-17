@@ -47,9 +47,9 @@ body {
 }
 
 .table-item {
-    column-count:2;
-    -moz-column-count:2;
-    -webkit-column-count:2;
+    column-count:1;
+    -moz-column-count:1;
+    -webkit-column-count:1;
     width: 60%;
     margin-bottom: 30px;
     margin: auto;
