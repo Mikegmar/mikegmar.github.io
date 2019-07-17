@@ -110,6 +110,13 @@ h1 {
     text-align: center;
 }
 
+header {
+    text-align: center;
+    max-width:960px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #mainHeader {
     width: 50%;
     margin: auto;
