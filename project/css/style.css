@@ -132,7 +132,7 @@ menu {
             inset 0 0 5px rgba(53,86,129, 0.5),
             inset -285px 0 35px white;
     border-radius: 0 10px 0 10px;
-    background: #fff url(../resources/headimg.png) no-repeat center left;
+    background: #fff url(/project/images/crypto_currenecy.png);
 }
 
 tr {
