@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/Bitcoin3.jpg");
+    background-image: url("../images/Bitcoin4.jpg");
 }
 
 #bodyContentAbout{
@@ -203,14 +203,11 @@ input#userSym:focus {
     background-color: #e6ffff;
 }
 
-input[type=button] {
-    width: 8%;
+input[type=button] {    
     height: 30px;
     transition: 300ms ease-in-out;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    display: block;
+    outline: none;   
+    border-radius: 4px;    
     margin: auto;
 }
 
