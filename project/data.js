@@ -3,7 +3,7 @@
 
 
 
------------------------------
+
 
 function setup() {
         if (localStorage.getItem('cryptoSearch') !== null) {
