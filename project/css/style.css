@@ -52,7 +52,7 @@ body {
     -webkit-column-count:1;
     width: 60%;
     margin-bottom: 30px;
-    margin: auto;
+    margin: 0;
     min-width: 900px;
 }
 
