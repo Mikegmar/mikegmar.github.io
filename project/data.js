@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 function setup() {
         if (localStorage.getItem('cryptoSearch') !== null) {
             var cryptoSearch = JSON.parse(localStorage.getItem('cryptoSearch'));
