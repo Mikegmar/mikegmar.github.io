@@ -1,0 +1,61 @@
+{
+  "sectionTitle" : "What we can offer to you",
+  "founded" : 2019,  
+  "available" : "24hours a day 7 days a week",
+  "services" : [
+    {
+      "name" : "Financial Investigations",
+      "svcImage" : "images/financial_investigations.jpg",
+      "subTitle" : "Let us run the numbers",
+      "description" : "Manipulation and misappropriations of funds, fraud, outright theft and a number of other white-collar crimes are a growing factor in the business world.."
+    },
+    {
+      "name" : "Computer Forensics",
+      "svcImage" : "images/computer_forensics.jpg",
+      "subTitle" : "We follow the digital trail",
+      "description" : "The information age has brought about countless cases of illegal activities that would otherwise be impossible. This technology allows criminals to commit crimes without their faces or names ever being attached.."
+    },
+    {
+      "name" : "Data Breach",
+      "svcImage" : "images/data_breach.jpg",
+      "subTitle" : "Did you lose some information, we will find out how",
+      "description" : "Time is of the essence when responding to a data breach because every second counts when systems are compromised and a company’s reputation is on the line."
+    },
+    {
+      "name" : "Missing Person",
+      "svcImage" : "images/missing_person.jpg",
+      "subTitle" : "Come out, come out wherever you are",
+      "description" : "We investigation in the disappearance of missing children and missing adults. Our services assist you in regards to kidnappings, runaways, and adult disappearances"
+    },
+    {
+      "name" : "Employee Theft",
+      "svcImage" : "images/employee_theft.jpg",
+      "subTitle" : "Employee theft totals nearly $40 billion each year",
+      "description" : "As hard as it is to believe that someone you hire would actually take from you, it happens every day in all kinds of businesses and in a variety of ways."
+    },
+    {
+      "name" : "Infidelity",
+      "svcImage" : "images/infidelity.jpg",
+      "subTitle" : "51% of married men and 67% of married women did not know of their spouse's where cheating",
+      "description" : "Infidelity investigation is one of the most common reasons private investigation is sought out, and we can give you the results you need for real peace of mind."
+    },
+    {
+      "name" : "Background Check",
+      "svcImage" : "images/background_check.jpg",
+      "subTitle" : "Let us offer you piece of mind when making decisions about the future",
+      "description" : "We utilize the best and most accurate databases, city, county, state and fedral court records in providing our clients more accurate and complete professional background check reports."
+    },
+    {
+      "name" : "Insurance Fraud",
+      "svcImage" : "images/insurance_fraud.jpg",
+      "subTitle" : "How dare you",
+      "description" : "An insurance fraud investigation aids by revealing false claims. Don't let your insurance premiums be a waste of money."
+    },
+    {
+      "name" : "Litigation Support",
+      "svcImage" : "images/litigation_support.jpg",
+      "subTitle" : "We got your back",
+      "description" : "We assists clients by gathering and producing evidence, interviewing witnesses, conducting asset searches and jury surveys, analyzing, locating and tracing asset."
+    }
+  ]
+}
